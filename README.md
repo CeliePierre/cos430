@@ -18,7 +18,7 @@ The **Animal Shelter Management** system is a web application designed to stream
 - **Framework:** Node.js with Express.js
 - **Database:** MongoDB
 - **Authentication:** JWT / OAuth
-- **ORM (if applicable):** Prisma / Mongoose / Sequelize
+- **ORM (if applicable):** Prisma / Mongoose 
 - **Cloud Storage:** AWS S3(for images and documents)
 
 ## 🏗️ System Architecture
