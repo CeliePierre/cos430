@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 
+
 const app = express();
 app.use(express.json()); // Middleware to parse JSON
 
@@ -17,6 +18,10 @@ mongoose
 // Define the model once
 const TestSchema = new mongoose.Schema({ name: String });
 const TestModel = mongoose.models.Test || mongoose.model("Test", TestSchema);
+
+// register user routes to the server
+const userRoutes = require('./routes/userRoutes');
+app.use('/users', userRoutes); 
 
 // Test MongoDB connection
 app.get("/test-db", async (req, res) => {
