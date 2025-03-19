@@ -1,27 +1,26 @@
 require("dotenv").config();
-const express = require("express");
-const mongoose = require("mongoose");
 
+const express = require("express");
+const connectDB = require("./config/db"); // Import database connection function
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON
 
 // Connect to MongoDB
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+connectDB();
 
 // Define the model once
+const mongoose = require("mongoose");
 const TestSchema = new mongoose.Schema({ name: String });
 const TestModel = mongoose.models.Test || mongoose.model("Test", TestSchema);
 
-// register user routes to the server
-const userRoutes = require('./routes/userRoutes');
-app.use('/users', userRoutes); 
+// Register the user routes
+const userRoutes = require("./routes/userRoutes");
+app.use("/users", userRoutes);
+
+// Register the animal routes
+const animalProfileRoutes = require("./routes/animalProfileRoutes");
+app.use("/animals", animalProfileRoutes); // Ensure the correct path
 
 // Test MongoDB connection
 app.get("/test-db", async (req, res) => {
@@ -38,4 +37,4 @@ app.get("/test-db", async (req, res) => {
 
 // Start Server
 const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
