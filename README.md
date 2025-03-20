@@ -95,9 +95,28 @@ JWT_SECRET=<your-secret-key>
 REACT_APP_API_URL=http://localhost:3000
 ```
 
+## 📡 API Endpoints
+
+### 🧑 User Routes (`/users`)
+
+| Method  | Endpoint       | Description              |
+|---------|---------------|--------------------------|
+| `GET`   | `/users`      | Fetch all users         |
+| `GET`   | `/users/:id`  | Fetch a user by ID      |
+| `POST`  | `/users`      | Create a new user       |
+| `PUT`   | `/users/:id`  | Update user details     |
+| `DELETE`| `/users/:id`  | Delete a user          |
+
+### 🐶 Animal Profile Routes (`/animals`)
+
+| Method  | Endpoint       | Description                        |
+|---------|---------------|------------------------------------|
+| `GET`   | `/animals`    | Fetch all animal profiles        |
+| `GET`   | `/animals/:id` | Fetch an animal profile by ID   |
+
 ## 📌 Contributing
 
-We welcome contributions! Please follow these steps:
+This is private project for COS430 class:
 
 1. Fork the repository
 2. Create a new branch (`feature/your-feature`)
