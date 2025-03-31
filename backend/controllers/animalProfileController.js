@@ -24,6 +24,17 @@ let mockAnimalProfiles = [
   },
 ];
 
+// Create a new animal profile
+const createAnimalProfile = async (req, res) => {
+  try {
+    const newAnimalProfile = new animalProfile(req.body);
+    const savedAnimal = await newAnimalProfile.save();
+    res.status(201).json(savedAnimalProfile);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+};
+    
 // Get all animal profiles
 // @route GET /animals
 // @access Public
