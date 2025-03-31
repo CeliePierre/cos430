@@ -10,4 +10,7 @@ router.get("/", (req, res, next) => {
 // Route to get an animal profile by ID
 router.get('/:animalID', animalProfileController.viewAnimalProfile);
 
+// Route to create a new animal profile
+router.post('/', createAnimalProfile);
+
 module.exports = router;
