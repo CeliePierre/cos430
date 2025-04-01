@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 // Schema for adoption applications submitted by users
 const AdoptionApplicationSchema = new mongoose.Schema({
+  
   // Unique application ID
   applicationID: { type: String, unique: true, default: uuidv4 },
 
