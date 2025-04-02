@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const animalSchema = new Schema({
-  animalID: {type: Integer },
+  animalID: {type: Number },
   name: { type: String, required: true },
   species: {type: String },
   breed: { type: String, required: true },

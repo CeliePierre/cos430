@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const animalProfileController = require('../controllers/animalProfileController');
+const animalProfileController = require('../controllers/AnimalProfileController');
 
 // Route to get all animal profiles
 router.get("/", (req, res, next) => {
@@ -11,6 +11,6 @@ router.get("/", (req, res, next) => {
 router.get('/:animalID', animalProfileController.viewAnimalProfile);
 
 // Route to create a new animal profile
-router.post('/', createAnimalProfile);
+router.post('/', animalProfileController.createAnimalProfile);
 
 module.exports = router;
