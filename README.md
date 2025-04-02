@@ -80,20 +80,13 @@ npm install
 npm start
 ```
 
-### **3️⃣ Environment Variables**
+### **3️⃣ Backend Setup**
 
-Create a `.env` file in the **backend** and **frontend** folders:
-
-```env
-# Backend
-DATABASE_URL=<your-database-url>
-JWT_SECRET=<your-secret-key>
-```
-
-```env
-# Frontend
-REACT_APP_API_URL=http://localhost:3000
-```
+1. Install dependencies run ```npm i```
+2. create ```.env``` file in root directory.
+3. in ```.env``` file pasting your mongo DB URI ```MONGO_URI=mongodb://localhost:27017/<<your DB name>>```
+4. run the backend server ```npm run dev```
+if everything is working, you should see ✅ MongoDB Connected
 
 ## 📡 API Endpoints
 
