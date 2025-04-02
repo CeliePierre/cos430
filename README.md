@@ -64,15 +64,8 @@ The **Animal Shelter Management** system is a web application designed to stream
 
 ## 🚀 Getting Started
 
-### **1️⃣ Backend Setup**
 
-```sh
-cd backend
-npm install
-npm run dev
-```
-
-### **2️⃣ Frontend Setup**
+### Frontend Setup
 
 ```sh
 cd frontend
@@ -80,7 +73,7 @@ npm install
 npm start
 ```
 
-### **3️⃣ Backend Setup**
+###  Backend Setup
 
 1. Install dependencies run ```npm i```
 2. create ```.env``` file in root directory.
