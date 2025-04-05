@@ -25,7 +25,7 @@ let mockAnimalProfiles = [
 ];
 
 // Create a new animal profile
-const animalProfile = require("../models/AnimalProfile");
+const createAnimalProfile = require("../models/AnimalProfile");
 exports.createAnimalProfile = async (req, res) => {
   try {
     const newAnimalProfile = new animalProfile(req.body);
@@ -39,7 +39,7 @@ exports.createAnimalProfile = async (req, res) => {
 // Get all animal profiles
 // @route GET /animals
 // @access Public
-exports.getAllAnimals = async (req, res) => {
+const getAllAnimals = async (req, res) => {
     console.log("📌 Controller hit: getAllAnimals()");
     
     try {
@@ -53,7 +53,7 @@ exports.getAllAnimals = async (req, res) => {
 // @desc View an animal profile by ID
 // @route GET /api/animal-profile/:animalID
 // @access Public
-exports.viewAnimalProfile = async (req, res) => {
+const viewAnimalProfile = async (req, res) => {
   try {
     const animalID = parseInt(req.params.animalID);
     const animal = mockAnimalProfiles.find((a) => a.animalID === animalID);
@@ -67,3 +67,10 @@ exports.viewAnimalProfile = async (req, res) => {
     res.status(500).json({ message: "Server Error", error: error.message });
   }
 };
+
+module.exports = {
+  createAnimalProfile,
+  getAllAnimals,
+  viewAnimalProfile,
+
+}

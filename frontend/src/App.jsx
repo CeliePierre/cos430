@@ -8,6 +8,7 @@ import AdoptionApplication from './pages/AdoptionApplication'
 import BrowseAnimals from './pages/BrowseAnimals'
 import Layout from './Layout'
 import NotFound from './pages/NotFoundPage'
+import AnimalProfile from './pages/AnimalProfile'
 
 const routes = [{
     path: '/',
@@ -22,6 +23,9 @@ const routes = [{
     }, {
       path: '/browse',
       element: <BrowseAnimals />
+    }, {
+      path: '/animalProfile',
+      element: <AnimalProfile />
     }]
 }]
 

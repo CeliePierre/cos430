@@ -1,9 +1,13 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require('cors');
 const connectDB = require("./config/db"); // Import database connection function
 
 const app = express();
+// Allow only React Frontend origin for now
+app.use(cors({origin: 'http://localhost:3000'}));
+app.use(cors());
 app.use(express.json()); // Middleware to parse JSON
 
 // Connect to MongoDB
@@ -19,7 +23,8 @@ const userRoutes = require("./routes/userRoutes");
 app.use("/users", userRoutes);
 
 // Register the animal routes
-const animalProfileRoutes = require("./routes/AnimalProfileRoutes");
+const animalProfileRoutes = require("./routes/animalProfileRoutes");
+
 app.use("/animals", animalProfileRoutes); // Ensure the correct path
 
 // Test MongoDB connection
