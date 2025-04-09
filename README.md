@@ -76,7 +76,7 @@ npm start
 ###  Backend Setup
 
 1. Install dependencies run ```npm i```
-2. create ```.env``` file in root directory.
+2. create ```.env``` file in root directory(make sure that you are in backend folder).
 3. in ```.env``` file pasting your mongo DB URI ```MONGO_URI=mongodb://localhost:27017/<<your DB name>>```
 4. run the backend server ```npm run dev```
 if everything is working, you should see ✅ MongoDB Connected
