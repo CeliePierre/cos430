@@ -4,7 +4,7 @@ const {
   getAllAnimals,
   viewAnimalProfile,
   createAnimalProfile,
-} = require("../controllers/animalProfileController");
+} = require("../controllers/AnimalProfileController");
 
 // Route to get all animal profiles
 router.get("/", getAllAnimals);

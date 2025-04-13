@@ -23,7 +23,7 @@ const userRoutes = require("./routes/userRoutes");
 app.use("/users", userRoutes);
 
 // Register the animal routes
-const animalProfileRoutes = require("./routes/animalProfileRoutes");
+const animalProfileRoutes = require("./routes/AnimalProfileRoutes");
 
 app.use("/animals", animalProfileRoutes); // Ensure the correct path
 
