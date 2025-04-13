@@ -47,8 +47,8 @@
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
-  background: #f9f9f9; /* Light background for contrast */
-  color: #333;         /* Darker text for readability */
+  background: #333;
+  color: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -68,32 +68,83 @@
 .animal-card h3 {
   margin: 0.5rem 0 0.25rem;
   font-size: 1.1rem;
+  color: #fff;
 }
 
 .animal-card p {
   margin: 0.25rem 0;
   font-size: 0.9rem;
-  color: #555; /* Medium gray for secondary info */
+  color: #fff;
 }
 
 .animal-profile img {
-  width: 100%;  /* Make the image responsive */
-  max-width: 600px;  /* Set a maximum width for the image */
-  height: auto;  /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: Add rounded corners */
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
   margin-top: 1rem;
 }
 
 .animal-profile-container {
-  width: 100%; /* Full width of its parent container */
-  max-width: 800px; /* Limit the width to match the navbar */
-  margin: 0 auto; /* Center it horizontally */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .animal-profile-container img {
-  width: 100%; /* Make image take up full width of its container */
-  max-width: 800px; /* Ensure it doesn't exceed 800px */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: Adds rounded corners for style */
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.adoption-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #333; */
+  border-radius: 8px;
+  color: #fff;
+}
+
+.adoption-form input,
+.adoption-form textarea,
+.adoption-form button {
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.adoption-form input::placeholder,
+.adoption-form textarea::placeholder {
+  color: #aaa;
+}
+
+.adoption-form button {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.adoption-form button:hover {
+  background-color: #555;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.success-message {
+  color: lightgreen;
+  font-size: 14px;
+}
+
+select {
+  margin-bottom: 16px;
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from 'react-router-dom';
+import AdoptionApplication from "./AdoptionApplication";
 
 export default function AnimalProfile() {
   const { id } = useParams(); // Get the dynamic 'id' from the URL
@@ -42,7 +42,7 @@ export default function AnimalProfile() {
       <p>Sex: {animal.sex}</p>
       <p>Intake Date: {animal.intakeDate}</p>
       <p>Vaccinations: {animal.medicalRecords.vaccinations.join(", ")}</p>
-      <p><Link to="/adopt">Apply to adopt {animal.name}</Link></p>
+      <AdoptionApplication animalID={id} />
     </div>
   );
 }
