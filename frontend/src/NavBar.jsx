@@ -11,9 +11,6 @@ export default function NavBar() {
           <Link to="/browse">Browse</Link>
         </li>
         <li>
-          <Link to="/animalProfile">Animal Profile</Link>
-        </li>
-        <li>
           <Link to="/adopt">Adopt</Link>
         </li>
       </ul>

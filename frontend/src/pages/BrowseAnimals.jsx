@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 export default function BrowseAnimals() {
   const [animals, setAnimals] = useState([]);
@@ -28,22 +29,17 @@ export default function BrowseAnimals() {
 
   return (
     <div>
-      <h1>Browse Animals</h1>
-      <div>
+      <h1>Browse Animals Available for Adoption</h1>
+      <div className="animal-gallery">
         {animals.map((animal) => (
-          <div key={animal.animalID}>
-            <img
-              src={animal.photo}
-              alt={animal.name}
-            />
+          <Link key={animal.animalID} to={`/animalProfile/${animal.animalID}`} className="animal-card">
+            <img src={animal.photo} alt={animal.name} />
             <h3>{animal.name}</h3>
             <p>
-              {animal.species} - {animal.breed}
+              {animal.species}, {animal.breed}
             </p>
-            <p>Age: {animal.age}</p>
-            <p>Sex: {animal.sex}</p>
-            <p>Intake Date: {animal.intakeDate}</p>
-          </div>
+            <p>{animal.sex}, {animal.age} years old</p>
+          </Link>
         ))}
       </div>
     </div>
