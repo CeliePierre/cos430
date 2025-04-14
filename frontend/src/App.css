@@ -33,10 +33,118 @@
   }
 }
 
-.card {
-  padding: 2em;
+.animal-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-.read-the-docs {
-  color: #888;
+.animal-card {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.animal-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.animal-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.animal-card h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.animal-card p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.animal-profile img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.animal-profile-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.animal-profile-container img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.adoption-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #333; */
+  border-radius: 8px;
+  color: #fff;
+}
+
+.adoption-form input,
+.adoption-form textarea,
+.adoption-form button {
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.adoption-form input::placeholder,
+.adoption-form textarea::placeholder {
+  color: #aaa;
+}
+
+.adoption-form button {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.adoption-form button:hover {
+  background-color: #555;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.success-message {
+  color: lightgreen;
+  font-size: 14px;
+}
+
+select {
+  margin-bottom: 16px;
 }

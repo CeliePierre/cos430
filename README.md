@@ -70,16 +70,16 @@ The **Animal Shelter Management** system is a web application designed to stream
 ```sh
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
 ###  Backend Setup
 
-1. Install dependencies run ```npm i```
-2. create ```.env``` file in root directory(make sure that you are in backend folder).
-3. in ```.env``` file pasting your mongo DB URI ```MONGO_URI=mongodb://localhost:27017/<<your DB name>>```
-4. run the backend server ```npm run dev```
-if everything is working, you should see ✅ MongoDB Connected
+1. Install dependencies run ```npm install```
+2. Create ```.env``` file in root directory(make sure that you are in backend folder).
+3. In ```.env``` file pasting your mongo DB URI ```MONGO_URI=mongodb://localhost:27017/mongoose```
+4. Run the backend server ```npm run dev```. 
+If everything is working, you should see ✅ MongoDB Connected
 
 ## 📡 API Endpoints
 
