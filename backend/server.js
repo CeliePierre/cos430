@@ -24,8 +24,10 @@ app.use("/users", userRoutes);
 
 // Register the animal routes
 const animalProfileRoutes = require("./routes/AnimalProfileRoutes");
+app.use("/animals", animalProfileRoutes); 
 
-app.use("/animals", animalProfileRoutes); // Ensure the correct path
+const applicationRoutes = require("./routes/AdoptionApplicationRoutes");
+app.use("/applications", applicationRoutes); 
 
 // Test MongoDB connection
 app.get("/test-db", async (req, res) => {

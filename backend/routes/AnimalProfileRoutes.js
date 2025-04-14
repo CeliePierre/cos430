@@ -9,9 +9,9 @@ const {
 // Route to get all animal profiles
 router.get("/", getAllAnimals);
 // Route to get an animal profile by ID
-router.get("/:animalID", viewAnimalProfile);
+router.get("/:id", viewAnimalProfile);
 
 // Route to create a new animal profile
-router.post("/animal", createAnimalProfile);
+router.post("/", createAnimalProfile);
 
 module.exports = router;
