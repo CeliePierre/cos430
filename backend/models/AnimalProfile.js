@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const { v4: uuidv4 } = require('uuid');
 
 const animalSchema = new Schema({
-  animalID: {type: Number },
+  animalID: { type: String, unique: true, default: uuidv4 },
   name: { type: String, required: true },
   species: {type: String },
   breed: { type: String, required: true },

@@ -8,9 +8,7 @@ const AdoptionApplicationSchema = new mongoose.Schema({
   applicationID: { type: String, unique: true, default: uuidv4 },
 
   // Name and email of the applicant
-  applicantName: { type: String, required: true },
-  applicantEmail: { type: String, required: true },
-
+  userID: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   // Reference to the animal being adopted
   animalID: { type: mongoose.Schema.Types.ObjectId, ref: 'Animal', required: true },
 

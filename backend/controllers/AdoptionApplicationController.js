@@ -1,11 +1,12 @@
 const AdoptionApplication = require('../models/AdoptionApplication');
-const Animal = require('../models/animal');  // Make sure Animal model is available for linking
+const Animal = require('../models/AnimalProfile');  
 
 // Create a new adoption application
 exports.createApplication = async (req, res) => {
   try {
     // Ensure the animal exists
     const animal = await Animal.findById(req.body.animalID);
+    console.log(animal, ': this is animal id');
     if (!animal) {
       return res.status(404).json({ message: 'Animal not found' });
     }
@@ -28,7 +29,9 @@ exports.getAllApplications = async (req, res) => {
     if (status) query.status = status;
     if (animalID) query.animalID = animalID;
 
-    const applications = await AdoptionApplication.find(query).populate('animalID', 'name species');
+    const applications = await AdoptionApplication.find(query)
+      .populate('userID') 
+    .populate('animalID', 'name species');
     res.status(200).json(applications);
   } catch (error) {
     res.status(500).json({ message: 'Failed to fetch adoption applications', error });
@@ -38,7 +41,9 @@ exports.getAllApplications = async (req, res) => {
 // Get a specific adoption application by ID
 exports.getApplicationById = async (req, res) => {
   try {
-    const application = await AdoptionApplication.findById(req.params.id).populate('animalID', 'name species');
+    const application = await AdoptionApplication.findOne({ applicationID: req.params.applicationID})
+    .populate('userID')
+    .populate('animalID', 'name species');
     if (!application) {
       return res.status(404).json({ message: 'Adoption application not found' });
     }
@@ -69,7 +74,7 @@ exports.updateApplicationStatus = async (req, res) => {
 // Delete an adoption application
 exports.deleteApplication = async (req, res) => {
   try {
-    const application = await AdoptionApplication.findByIdAndDelete(req.params.id);
+    const application = await AdoptionApplication.findOneAndDelete({applicationID: req.params.application});
     if (!application) {
       return res.status(404).json({ message: 'Adoption application not found' });
     }
@@ -78,3 +83,4 @@ exports.deleteApplication = async (req, res) => {
     res.status(500).json({ message: 'Failed to delete adoption application', error });
   }
 };
+

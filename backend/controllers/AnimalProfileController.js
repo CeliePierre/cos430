@@ -1,34 +1,11 @@
-//Mock animal Model will delete when all DB and Model is setup
-let mockAnimalProfiles = [
-  {
-    animalID: 1,
-    name: "Buddy",
-    species: "Dog",
-    breed: "Golden Retriever",
-    age: 5,
-    sex: "Male",
-    intakeDate: "2023-06-15",
-    medicalRecords: { vaccinations: ["Rabies", "Parvo"] },
-    photo: "https://example.com/buddy.jpg",
-  },
-  {
-    animalID: 2,
-    name: "Mittens",
-    species: "Cat",
-    breed: "Maine Coon",
-    age: 3,
-    sex: "Female",
-    intakeDate: "2024-01-10",
-    medicalRecords: { vaccinations: ["FVRCP", "Rabies"] },
-    photo: "https://example.com/mittens.jpg",
-  },
-];
 
 // Create a new animal profile
-const createAnimalProfile = require("../models/AnimalProfile");
-exports.createAnimalProfile = async (req, res) => {
+const AnimalProfile = require("../models/AnimalProfile");
+const createAnimalProfile = async (req, res) => {
+  console.log("body req:", req.body); ;
   try {
-    const newAnimalProfile = new animalProfile(req.body);
+    const {name, species, breed, age, sex, medicalRecords, photo } = req.body;
+    const newAnimalProfile = new AnimalProfile({ name, species, breed, age, sex, medicalRecords, photo });
     const savedAnimalProfile = await newAnimalProfile.save();
     res.status(201).json(savedAnimalProfile);
   } catch (err) {
@@ -43,7 +20,8 @@ const getAllAnimals = async (req, res) => {
     console.log("📌 Controller hit: getAllAnimals()");
     
     try {
-        res.status(200).json(mockAnimalProfiles);
+      const animals = await AnimalProfile.find();
+        res.json(animals);
     } catch (error) {
         console.error("❌ Server Error:", error.message);
         res.status(500).json({ message: "Server Error", error: error.message });
@@ -56,7 +34,7 @@ const getAllAnimals = async (req, res) => {
 const viewAnimalProfile = async (req, res) => {
   try {
     const animalID = parseInt(req.params.animalID);
-    const animal = mockAnimalProfiles.find((a) => a.animalID === animalID);
+    const animal = AnimalProfile.findById(animalID);
 
     if (!animal) {
       return res.status(404).json({ message: "Animal profile not found" });
