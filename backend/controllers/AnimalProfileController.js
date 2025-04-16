@@ -146,9 +146,8 @@ const getAllAnimals = async (req, res) => {
 // @access Public
 const viewAnimalProfile = async (req, res) => {
   try {
-    const animalID = parseInt(req.params.animalID);
-    const animal = AnimalProfile.findById(animalID);
-
+    const animal = await AnimalProfile.findOne({animalID:req.params.id});
+    
     if (!animal) {
       return res.status(404).json({ message: "Animal profile not found" });
     }
@@ -158,6 +157,7 @@ const viewAnimalProfile = async (req, res) => {
     res.status(500).json({ message: "Server Error", error: error.message });
   }
 };
+
 
 module.exports = {
   createAnimalProfile,
