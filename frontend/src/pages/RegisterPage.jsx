@@ -1,6 +1,6 @@
 export default function Register() {
     return (
-        <div>
+        <div className="page-wrapper">
         <h1>Register</h1>
         </div>
     );

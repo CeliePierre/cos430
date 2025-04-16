@@ -1,123 +1,149 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+:root {
+  --primary: #a8dadc;
+  --secondary: #f1faee;
+  --accent: #ffb703;
+  --text: #1d3557;
+  --card-bg: #ffffff;
+  --form-bg: #fefae0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --font: 'Quicksand', sans-serif;
+  --hover: #ffd166;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: url('/textures/pawprint-bg.png') repeat;
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.page-wrapper {
+  background-color: #fff;
   padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 2rem auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 1rem 2rem;
+  border-bottom: 3px solid var(--accent);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar a {
+  color: var(--text);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar a:hover {
+  color: var(--accent);
 }
 
+/* Animal Gallery */
 .animal-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
   margin-top: 2rem;
 }
 
 .animal-card {
-  width: 200px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  width: 220px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
   padding: 1rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  background: #333;
-  color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .animal-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .animal-card img {
   width: 100%;
-  height: 140px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: var(--radius);
 }
 
 .animal-card h3 {
-  margin: 0.5rem 0 0.25rem;
-  font-size: 1.1rem;
-  color: #fff;
+  margin-top: 0.5rem;
+  color: var(--text);
 }
 
-.animal-card p {
-  margin: 0.25rem 0;
-  font-size: 0.9rem;
-  color: #fff;
+/* Buttons */
+button {
+  background-color: var(--accent);
+  color: var(--text);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.animal-profile img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 1rem;
+button:hover {
+  background-color: var(--hover);
+  transform: scale(1.05);
 }
 
-.animal-profile-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
 
-.animal-profile-container img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 8px;
-}
-
+/* Application */
 .adoption-form {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
-  /* background-color: #333; */
-  border-radius: 8px;
-  color: #fff;
+  padding: 2rem;
+  background-color: var(--form-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+/* Form headings */
+.adoption-form h2 {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .adoption-form input,
-.adoption-form textarea,
-.adoption-form button {
-  width: 75%;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #444;
-  color: #fff;
-  border: 1px solid #555;
-  border-radius: 4px;
+.adoption-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--text);
 }
 
 .adoption-form input::placeholder,
@@ -126,25 +152,80 @@
 }
 
 .adoption-form button {
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
   border: none;
   cursor: pointer;
+  padding: 14px;
+  border-radius: var(--radius);
   transition: background-color 0.3s ease;
 }
 
 .adoption-form button:hover {
-  background-color: #555;
+  background-color: var(--hover);
+}
+
+.adoption-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--text);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.adoption-form select:hover {
+  background-color: var(--hover);
+  border-color: var(--accent);
+}
+
+.adoption-form select:focus {
+  background-color: var(--secondary);
+  border-color: var(--primary);
+  outline: none;
 }
 
 .error-message {
-  color: red;
+  color: #d9534f;
   font-size: 14px;
+  text-align: center;
 }
 
 .success-message {
-  color: lightgreen;
+  color: #28a745;
   font-size: 14px;
+  text-align: center;
 }
 
-select {
-  margin-bottom: 16px;
+/* Logo styling */
+.logo {
+  height: 5em;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.home-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.home-icon:hover {
+  color: var(--accent);
 }

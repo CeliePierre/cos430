@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 export default function AdoptionApplication() {
-  const { id: routeAnimalID } = useParams(); // animal ID from /animalProfile/:id -> /adopt
+  const { id: routeAnimalID } = useParams();
   const [animals, setAnimals] = useState([]);
   const [animalID, setAnimalID] = useState(routeAnimalID || "");
   const [animalName, setAnimalName] = useState("");
@@ -12,7 +12,6 @@ export default function AdoptionApplication() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  // Fetch animals if no animalID from route
   useEffect(() => {
     if (!routeAnimalID) {
       fetch("http://localhost:5001/animals")
@@ -22,7 +21,6 @@ export default function AdoptionApplication() {
     }
   }, [routeAnimalID]);
 
-  // Fetch animal name when ID is present
   useEffect(() => {
     if (animalID && routeAnimalID) {
       fetch(`http://localhost:5001/animals/${animalID}`)
@@ -58,16 +56,17 @@ export default function AdoptionApplication() {
 
       if (!res.ok) throw new Error(data.message || "Submission failed");
       setMessage("Application submitted successfully!");
-      // Optional: redirect or clear form
     } catch (err) {
       console.error(err);
       setMessage(`Error: ${err.message}`);
     }
   };
 
+  // TODO: Fix formatting
+
   return (
-    <div className="adoption-form">
-      <h2>Adoption Application</h2>
+    <div className="page-wrapper">
+      <h1>Adoption Application</h1>
       {animalName ? (
         <p>
           You are applying to adopt <strong>{animalName}</strong>, ID #
@@ -78,6 +77,7 @@ export default function AdoptionApplication() {
           <label>Select an animal to adopt: </label>
           <select
             value={animalID}
+            className="adoption-form"
             onChange={(e) => setAnimalID(e.target.value)}
           >
             <option value="">-- Choose an animal --</option>
@@ -88,9 +88,10 @@ export default function AdoptionApplication() {
             ))}
           </select>
         </div>
+        
       )}
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="adoption-form">
         <input
           type="text"
           placeholder="Your name"
@@ -112,7 +113,15 @@ export default function AdoptionApplication() {
         />
         <button type="submit">Submit Application</button>
       </form>
-      {message && <p className={message.includes("successfully") ? "success-message" : "error-message"}>{message}</p>}
+      {message && (
+        <p
+          className={
+            message.includes("successfully") ? "success-message" : "error-message"
+          }
+        >
+          {message}
+        </p>
+      )}
     </div>
   );
 }

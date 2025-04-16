@@ -28,7 +28,7 @@ export default function BrowseAnimals() {
   if (error) return <p>Error fetching animals: {error}</p>;
 
   return (
-    <div>
+    <div className="page-wrapper">
       <h1>Browse Animals Available for Adoption</h1>
       <div className="animal-gallery">
         {animals.map((animal) => (
