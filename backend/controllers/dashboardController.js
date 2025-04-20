@@ -1,5 +1,5 @@
 const staffDashboard = (req, res) => {
-  if (req.user.role !== "staff") {
+  if (req.user.role !== "Staff") {
     return res.status(403).json({ message: "Access denied: Staff only" });
   }
 
@@ -7,7 +7,7 @@ const staffDashboard = (req, res) => {
 };
 
 const visitorDashboard = (req, res) => {
-  if (req.user.role !== "visitor") {
+  if (req.user.role !== "Visitor") {
     return res.status(403).json({ message: "Access denied: Visitors only" });
   }
 

@@ -23,10 +23,10 @@ const TestModel = mongoose.models.Test || mongoose.model("Test", TestSchema);
 const auth = require("./middlewares/auth");
 const roleCheck = require("./middlewares/roleCheck");
 
-app.get("/staff-dashboard", auth, roleCheck(["staff"]), (req, res) => {
+app.get("/staff-dashboard", auth, roleCheck(["Staff"]), (req, res) => {
   res.send("Welcome, Staff!");
 });
-app.get("/visitor-dashboard", auth, roleCheck(["visitor"]), (req, res) => {
+app.get("/visitor-dashboard", auth, roleCheck(["Visitor"]), (req, res) => {
   res.send("Welcome, Visitor!");
 });
 
