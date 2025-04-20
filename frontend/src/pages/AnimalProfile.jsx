@@ -30,17 +30,26 @@ export default function AnimalProfile() {
   if (error) return <p>Error fetching animal: {error}</p>;
 
   return (
-    <div>
-      <h1>{animal.name}</h1>
-      <div className="animal-profile-container">
+    <div className="animal-profile">
+      <div className="animal-photo">
         <img src={animal.photo} alt={animal.name} />
       </div>
-      <p>Species: {animal.species}</p>
-      <p>Breed: {animal.breed}</p>
-      <p>Age: {animal.age} years old</p>
-      <p>Sex: {animal.sex}</p>
-      <p>Intake Date: {animal.intakeDate}</p>
-      <p>Vaccinations: {animal.medicalRecords.vaccinations.join(", ")}</p>
+
+      <div className="animal-info">
+        <h1>{animal.name}</h1>
+        <p>Species: {animal.species}</p>
+        <p>Breed: {animal.breed}</p>
+        <p>Age: {animal.age} years old</p>
+        <p>Sex: {animal.sex}</p>
+        <p>
+          Intake Date:{" "}
+          {new Date(animal.intakeDate).toLocaleString("en-US", {
+            dateStyle: "long",
+            timeStyle: "short",
+          })}
+        </p>
+        <p>Vaccinations: {animal.medicalRecords}</p>
+      </div>
       <AdoptionApplication animalID={id} />
     </div>
   );
