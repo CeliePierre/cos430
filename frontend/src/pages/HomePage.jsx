@@ -46,7 +46,7 @@ export default function HomePage() {
             padding: '1.5rem',
             borderRadius: 'var(--radius)',
             boxShadow: 'var(--shadow)',
-            maxWidth: '400px',
+            maxWidth: '800px',
             marginInline: 'auto'
           }}>
             <img
@@ -57,7 +57,7 @@ export default function HomePage() {
                 borderRadius: 'var(--radius)',
                 marginBottom: '1rem',
                 objectFit: 'cover',
-                height: '200px'
+                height: '400px'
               }}
             />
             <h3>{featuredPet.name}</h3>
