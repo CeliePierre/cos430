@@ -88,7 +88,7 @@ export default function HomePage() {
               />
               <h3>{featuredPet.name}</h3>
               <p>{featuredPet.species} • {featuredPet.breed}</p>
-              <Link to={`/animalProfile/${featuredPet._id}`}>
+              <Link to={`/animalProfile/${featuredPet.animalID}`}>
                 <button style={{ marginTop: '1rem' }}>
                   Meet {featuredPet.name}
                 </button>
