@@ -1,48 +1,64 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const [featuredPet, setFeaturedPet] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5001/animals')
-      .then(res => res.json())
-      .then(data => {
+    fetch("http://localhost:5001/animals")
+      .then((res) => res.json())
+      .then((data) => {
         if (data.length > 0) {
           const randomIndex = Math.floor(Math.random() * data.length);
           setFeaturedPet(data[randomIndex]);
         }
       })
-      .catch(err => console.error('Error fetching animals:', err));
+      .catch((err) => console.error("Error fetching animals:", err));
   }, []);
 
   return (
     <div className="page-wrapper">
       <h1>🐾 Welcome 🐾</h1>
-      <p style={{ marginBottom: '2rem' }}>
+      <p style={{ marginBottom: "2rem" }}>
         Bringing loving animals and caring humans together.
       </p>
 
       <div
         style={{
-          display: 'flex',
-          gap: '2rem',
-          marginTop: '2rem',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
+          display: "flex",
+          gap: "2rem",
+          marginTop: "2rem",
+          justifyContent: "center",
+          flexWrap: "wrap",
         }}
       >
         {/* Left: Info Panels */}
-        <div style={{ width: '450px' }}>
-          <div style={{ marginBottom: '2rem' }}>
+        <div style={{ width: "450px" }}>
+          <div style={{ marginBottom: "2rem" }}>
             <h2>🔎 Browse</h2>
             <p>Find your new best friend!</p>
-            <Link to="/browse">
-              <button>Browse All Animals</button>
-            </Link>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+                marginTop: "1rem",
+                alignItems: "center",
+              }}
+            >
+              <Link to="/browse?type=dog">
+                <button style={{ width: "200px" }}>🐶 Adopt a Dog</button>
+              </Link>
+              <Link to="/browse?type=cat">
+                <button style={{ width: "200px" }}>🐱 Adopt a Cat</button>
+              </Link>
+              <Link to="/browse">
+                <button style={{ width: "200px" }}>Browse All Animals</button>
+              </Link>
+            </div>
           </div>
 
-          <div style={{ marginBottom: '2rem' }}>
+          <div style={{ marginBottom: "2rem" }}>
             <h2>🐾 Get Involved</h2>
             <p>
               Help us care for animals in need. <br />
@@ -63,33 +79,35 @@ export default function HomePage() {
         </div>
 
         {/* Right: Featured Pet */}
-        <div style={{ width: '350px' }}>
+        <div style={{ width: "350px" }}>
           <h2>✨ Featured Pet</h2>
           {featuredPet ? (
             <div
               style={{
-                marginTop: '1rem',
-                backgroundColor: 'var(--card-bg)',
-                padding: '1.5rem',
-                borderRadius: 'var(--radius)',
-                boxShadow: 'var(--shadow)',
+                marginTop: "1rem",
+                backgroundColor: "var(--card-bg)",
+                padding: "1.5rem",
+                borderRadius: "var(--radius)",
+                boxShadow: "var(--shadow)",
               }}
             >
               <img
                 src={featuredPet.photo}
                 alt={featuredPet.name}
                 style={{
-                  width: '100%',
-                  borderRadius: 'var(--radius)',
-                  marginBottom: '1rem',
-                  objectFit: 'cover',
-                  height: '350px',
+                  width: "100%",
+                  borderRadius: "var(--radius)",
+                  marginBottom: "1rem",
+                  objectFit: "cover",
+                  height: "350px",
                 }}
               />
               <h3>{featuredPet.name}</h3>
-              <p>{featuredPet.species} • {featuredPet.breed}</p>
+              <p>
+                {featuredPet.species} • {featuredPet.breed}
+              </p>
               <Link to={`/animalProfile/${featuredPet.animalID}`}>
-                <button style={{ marginTop: '1rem' }}>
+                <button style={{ marginTop: "1rem" }}>
                   Meet {featuredPet.name}
                 </button>
               </Link>
