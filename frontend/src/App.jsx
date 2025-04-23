@@ -8,6 +8,7 @@ import BrowseAnimals from './pages/BrowseAnimals';
 import Layout from './Layout';
 import NotFound from './pages/NotFoundPage';
 import AnimalProfile from './pages/AnimalProfile';
+import VolunteerApplication from './pages/VolunteerApplication';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/adopt" element={<AdoptionApplication />} />
         <Route path="/browse" element={<BrowseAnimals />} />
         <Route path="/animalProfile/:id" element={<AnimalProfile />} />
+        <Route path="/volunteer" element={<VolunteerApplication />} />
         
         <Route path="*" element={<NotFound />} />
       </Routes>
