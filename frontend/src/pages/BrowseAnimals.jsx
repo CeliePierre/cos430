@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link, useSearchParams } from "react-router-dom"; // Import Link from react-router-dom
 
 export default function BrowseAnimals() {
   const [animals, setAnimals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchParams] = useSearchParams();
+  const type = searchParams.get('type'); 
 
   useEffect(() => {
     fetch("http://localhost:5001/animals")
@@ -17,12 +19,19 @@ export default function BrowseAnimals() {
       .then((data) => {
         setAnimals(data);
         setLoading(false);
+
+        if(type){
+          const filteredAnimal = data.filter((animal) => animal.species.toLowerCase() === type.toLowerCase());
+          setAnimals(filteredAnimal);
+        } else {
+          setAnimals(data);
+        }
       })
       .catch((error) => {
         setError(error.message);
         setLoading(false);
       });
-  }, []);
+  }, [type]);
 
   if (loading) return <p>Loading animals...</p>;
   if (error) return <p>Error fetching animals: {error}</p>;
