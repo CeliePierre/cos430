@@ -268,3 +268,72 @@ button:hover {
 .home-icon:hover {
   color: var(--accent);
 }
+
+
+
+
+/*---------------Sign UP --------------------*/
+
+.signup-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--secondary);
+}
+
+.signup-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem; /* round corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* soft shadow */
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.signup-form h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #1f2d3d;
+  margin-bottom: 0.5rem;
+}
+
+.signup-form p {
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.signup-form input,
+.signup-form select {
+  background-color: white; 
+  color: #333; 
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.btn-signup-outline {
+  padding:  0.6rem;
+  background-color: white;
+  color: #dda30e; 
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-right: 1rem;
+  border-radius: 0.7rem;
+}
+
+.btn-signup-outline:hover {
+  background-color: #fbbf24;
+  color: black
+}

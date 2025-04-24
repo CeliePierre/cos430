@@ -12,7 +12,6 @@ const signup = async (req, res) => {
       return res.status(400).json({ message: "Email already exists" });
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    console.log(hashedPassword, ": this is hash password");
 
     const user = await User.create({
       name,
@@ -25,12 +24,18 @@ const signup = async (req, res) => {
     const token = jwt.sign(
       { userID: user.userID, role: user.role },
       process.env.JWT_SECRET,
-      {
-        expiresIn: "1d",
-      }
+      { expiresIn: "1d" }
     );
 
-    res.status(201).json({ token });
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: false, // make this secure to false for local testing
+      // secure: process.env.NODE_ENV === "production",
+      sameSite: "Lax",
+      maxAge: 24 * 60 * 60 * 1000,
+    });
+
+    res.status(201).json({ message: "Signup successful" });
   } catch (err) {
     console.log(err, ":this is err");
     if (err.name === "ValidationError") {
@@ -64,7 +69,25 @@ const login = async (req, res) => {
   }
 };
 
+// Logout Controller
+const logout = (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "Lax",
+  });
+
+  res.status(200).json({ message: "Logged out successfully" });
+};
+
 module.exports = {
   signup,
   login,
+  logout,
+};
+
+module.exports = {
+  signup,
+  login,
+  logout,
 };

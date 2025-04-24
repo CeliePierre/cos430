@@ -28,6 +28,13 @@ export default function NavBar() {
         <Link to="/browse">Browse Animals</Link>
         <Link to="/adopt">Apply for Adoption</Link>
         <Link to="/volunteer">Volunteer</Link>
+        <button
+          className="btn-signup-outline"
+          onClick={() => (window.location.href = "/signup")}
+        >
+          Sign Up
+        </button>
+
         <button className="auth-button" onClick={handleAuthClick}>
           {isLoggedIn ? "Logout" : "Login"}
         </button>
