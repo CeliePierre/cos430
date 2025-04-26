@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function StaffDashboard() {
+export default function VisitorDashboard() {
   return (
     <div
       style={{
@@ -14,10 +14,10 @@ export default function StaffDashboard() {
       }}
     >
       <h1 style={{ fontSize: "2rem", color: "#1f2937" }}>
-        🐾 Welcome to the staff Dashboard! 🐾
+        🐾 Welcome to the Visitor Dashboard! 🐾
       </h1>
       <p style={{ fontSize: "1rem", color: "#4b5563", marginTop: "1rem" }}>
-        You’ve successfully signed up/login and landed on the staff page.
+        You’ve successfully signed up and landed on the visitor page.
       </p>
     </div>
   );

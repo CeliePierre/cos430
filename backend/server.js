@@ -4,12 +4,13 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./config/db"); // Import database connection function
+const cookieParser = require("cookie-parser");
 
 const app = express();
 // Allow only React Frontend origin for now
-app.use(cors({ origin: "http://localhost:3000" }));
-app.use(cors());
-app.use(express.json()); // Middleware to parse JSON
+app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(express.json());
+app.use(cookieParser());
 
 // Connect to MongoDB
 connectDB();
