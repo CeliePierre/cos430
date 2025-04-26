@@ -12,6 +12,7 @@ const signup = async (req, res) => {
       return res.status(400).json({ message: "Email already exists" });
 
     const hashedPassword = await bcrypt.hash(password, 10);
+    console.log(hashedPassword, ": hashed password");
 
     const user = await User.create({
       name,
@@ -21,26 +22,9 @@ const signup = async (req, res) => {
       password: hashedPassword,
     });
 
-    const token = jwt.sign(
-      { userID: user.userID, role: user.role },
-      process.env.JWT_SECRET,
-      { expiresIn: "1d" }
-    );
-
-    res.cookie("token", token, {
-      httpOnly: true,
-      secure: false, // make this secure to false for local testing
-      // secure: process.env.NODE_ENV === "production",
-      sameSite: "Lax",
-      maxAge: 24 * 60 * 60 * 1000,
-    });
-
-    res.status(201).json({ message: "Signup successful" });
-  } catch (err) {
-    console.log(err, ":this is err");
-    if (err.name === "ValidationError") {
-      return res.status(400).json({ message: err.message });
-    }
+    res.status(201).json({ message: "User created successfully" });
+  } catch (error) {
+    console.log(error);
     res.status(500).json({ message: "Server error" });
   }
 };
@@ -48,9 +32,9 @@ const signup = async (req, res) => {
 // Login Controller
 const login = async (req, res) => {
   const { email, password } = req.body;
-  console.log(email, password, ": this is email and password");
   try {
     const user = await User.findOne({ email });
+    console.log(user, ": this is user");
     if (!user) return res.status(400).json({ message: "Invalid credentials" });
 
     const isMatch = await bcrypt.compare(password, user.password);
@@ -62,7 +46,16 @@ const login = async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: "1d" }
     );
-    res.json({ token });
+
+    // SET the cookie
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 24 * 60 * 60 * 1000, // 1 day
+    });
+
+    res.json({ message: "Login successful", role: user.role });
   } catch (err) {
     console.log(err, ": this is err");
     res.status(500).json({ message: "Server error" });
@@ -80,14 +73,23 @@ const logout = (req, res) => {
   res.status(200).json({ message: "Logged out successfully" });
 };
 
-module.exports = {
-  signup,
-  login,
-  logout,
+// ✅ NEW VerifyAuth Controller
+const verifyAuth = (req, res) => {
+  const token = req.cookies.token;
+  if (!token)
+    return res.status(401).json({ message: "Access denied. No token." });
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    res.json({ message: "Authorized", role: decoded.role });
+  } catch (error) {
+    res.status(400).json({ message: "Invalid token" });
+  }
 };
 
 module.exports = {
   signup,
   login,
   logout,
+  verifyAuth, 
 };

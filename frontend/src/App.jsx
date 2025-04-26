@@ -12,6 +12,8 @@ import VolunteerApplication from "./pages/VolunteerApplication";
 import SignUp from "./pages/SignupPage";
 import VisitorDashboard from "./pages/VisitorDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Login from "./pages/LoginPage";
+import StaffDashboard from "./pages/StaffDashboard";
 
 function App() {
   return (
@@ -24,11 +26,20 @@ function App() {
         <Route path="/animalProfile/:id" element={<AnimalProfile />} />
         <Route path="/volunteer" element={<VolunteerApplication />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
         <Route
           path="/visitorDashboard"
           element={
             <ProtectedRoute>
               <VisitorDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/staffDashboard"
+          element={
+            <ProtectedRoute>
+              <StaffDashboard />
             </ProtectedRoute>
           }
         />

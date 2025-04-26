@@ -274,7 +274,7 @@ button:hover {
 
 /*---------------Sign UP --------------------*/
 
-.signup-container{
+.signup-login-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,7 +283,7 @@ button:hover {
   background-color: var(--secondary);
 }
 
-.signup-form {
+.signup-login-form {
   background-color: white;
   padding: 2rem;
   border-radius: 1rem; /* round corners */
@@ -296,22 +296,22 @@ button:hover {
   align-items: stretch;
 }
 
-.signup-form h2 {
+.signup-login-form h2 {
   text-align: center;
   font-size: 1.75rem;
   color: #1f2d3d;
   margin-bottom: 0.5rem;
 }
 
-.signup-form p {
+.signup-login-form p {
   text-align: center;
   color: #555;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
 
-.signup-form input,
-.signup-form select {
+.signup-login-form input,
+.signup-login-form select {
   background-color: white; 
   color: #333; 
   border: 1px solid #ccc;
@@ -336,4 +336,45 @@ button:hover {
 .btn-signup-outline:hover {
   background-color: #fbbf24;
   color: black
+}
+
+
+
+/* ----- PetLoader ----- */
+.pet-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 120px;
+  z-index: 9999;
+}
+
+.pet-loader .frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  animation: petRun 1s steps(1) infinite;
+}
+
+.pet-loader .frame-1 {
+  background-image: url("/src/assets/dog-cat-run-1.png");
+  animation-delay: 0s;
+}
+
+.pet-loader .frame-2 {
+  background-image: url("/src/assets/dog-cat-run-2.png");
+  animation-delay: 0.5s;
+}
+
+@keyframes petRun {
+  0%   { opacity: 1; }
+  49%  { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 0; }
 }

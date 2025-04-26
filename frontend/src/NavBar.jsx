@@ -1,18 +1,35 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { Home } from "lucide-react";
+import { useState, useEffect } from "react";
+import { checkAuth, logoutUser } from "../src/services/api"; // adjust path if needed
 import "./App.css";
 
 export default function NavBar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userRole, setUserRole] = useState(""); // ✅ New role state
   const navigate = useNavigate();
 
-  const handleAuthClick = () => {
-    if (isLoggedIn) {
+  useEffect(() => {
+    const verifyLogin = async () => {
+      const user = await checkAuth();
+      if (user) {
+        setIsLoggedIn(true);
+        setUserRole(user.role); // ✅ Set role
+      } else {
+        setIsLoggedIn(false);
+        setUserRole("");
+      }
+    };
+    verifyLogin();
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await logoutUser();
       setIsLoggedIn(false);
+      setUserRole("");
       navigate("/");
-    } else {
-      navigate("/login");
+    } catch (error) {
+      console.log("Logout error:", error);
     }
   };
 
@@ -23,21 +40,38 @@ export default function NavBar() {
       </Link>
       <div className="nav-links">
         <Link to="/" className="home-icon" title="Home">
-          <Home size={20} />
+          Home
         </Link>
         <Link to="/browse">Browse Animals</Link>
         <Link to="/adopt">Apply for Adoption</Link>
         <Link to="/volunteer">Volunteer</Link>
-        <button
-          className="btn-signup-outline"
-          onClick={() => (window.location.href = "/signup")}
-        >
-          Sign Up
-        </button>
 
-        <button className="auth-button" onClick={handleAuthClick}>
-          {isLoggedIn ? "Logout" : "Login"}
-        </button>
+        {/* ✅ Show Dashboard link only when logged in */}
+        {isLoggedIn && (
+          <Link
+            to={userRole === "Staff" ? "/staffDashboard" : "/visitorDashboard"}
+          >
+            Dashboard
+          </Link>
+        )}
+
+        {!isLoggedIn ? (
+          <>
+            <button
+              onClick={() => navigate("/signup")}
+              className="btn-signup-outline"
+            >
+              Sign Up
+            </button>
+            <button onClick={() => navigate("/login")} className="auth-button">
+              Login
+            </button>
+          </>
+        ) : (
+          <button onClick={handleLogout} className="auth-button">
+            Logout
+          </button>
+        )}
       </div>
     </nav>
   );

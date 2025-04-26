@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { checkAuth } from "../services/api"; // adjust if needed
+import { checkAuth } from "../services/api"; // you already have this!
 
 const ProtectedRoute = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -17,8 +17,7 @@ const ProtectedRoute = ({ children }) => {
 
   if (loading) return <p>Loading...</p>;
 
-  // 🔥 Redirect to /login if not authorized
-  return authorized ? children : <Navigate to="/login" replace />;
+  return authorized ? children : <Navigate to="/" replace />;
 };
 
 export default ProtectedRoute;
