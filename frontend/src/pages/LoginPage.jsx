@@ -34,20 +34,24 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       setIsLoading(true); // Start loading
       const response = await loginUser(form);
       const user = response.data;
-
+  
       setFormError("");
       console.log("Login success!", user);
-
+  
       setTimeout(() => {
         if (user.role === "Staff") {
           navigate("/staffDashboard");
-        } else {
+        } else if (user.role === "Volunteer") {
+          navigate("/volunteerDashboard");
+        } else if (user.role === "Visitor") {
           navigate("/visitorDashboard");
+        } else {
+          navigate("/");
         }
         window.location.reload();
       }, 1500); // Show loader for a bit
@@ -59,7 +63,7 @@ export default function Login() {
       setFormError(message);
     }
   };
-
+  
   return (
     <main className="signup-login-container">
       {isLoading ? (
@@ -75,15 +79,7 @@ export default function Login() {
         </div>
       ) : (
         <>
-          <h2>
-            <span role="img" aria-label="paw">
-              🐾
-            </span>{" "}
-            Welcome to ASMS{" "}
-            <span role="img" aria-label="paw">
-              🐾
-            </span>
-          </h2>
+          <h1>Account Login</h1>
           <p>Sign in to adopt, volunteer, and explore more!</p>
 
           <form onSubmit={handleSubmit} className="signup-login-form">
@@ -135,7 +131,10 @@ export default function Login() {
               You're already logged in. Go to your{" "}
               <a
                 href={
-                  userRole === "Staff" ? "/staffDashboard" : "/visitorDashboard"
+                  userRole === "Staff" ? "/staffDashboard" : 
+                  userRole === "Volunteer" ? "/volunteerDashboard" :
+                  userRole === "Visitor" ? "/visitorDashboard" :
+                  "/"
                 }
               >
                 Dashboard

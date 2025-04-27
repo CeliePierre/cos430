@@ -201,7 +201,6 @@ button:hover {
 .signup-login-container{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: var(--secondary);
@@ -300,6 +299,58 @@ button:hover {
   background-image: url("/src/assets/dog-cat-run-2.png");
   animation-delay: 0.5s;
 }
+
+/* Styles for volunteer opportunities */
+.opportunity-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.opportunity-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-5px);
+}
+
+.opportunity-card h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.opportunity-card p {
+  margin: 10px 0;
+}
+
+.opportunity-card strong {
+  font-weight: bold;
+}
+
+.opportunity-gallery p {
+  color: #555;
+}
+
+.calendar-container {
+  margin-bottom: 30px;
+}
+
+.react-calendar__tile--highlighted {
+  background-color: #ffcc00; 
+  color: white;
+}
+
+.react-calendar__tile--highlighted:hover {
+  background-color: #ff9900; 
+}
+
 
 @keyframes petRun {
   0%   { opacity: 1; }

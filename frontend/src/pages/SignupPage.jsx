@@ -10,7 +10,7 @@ export default function SignUp() {
     phone: "",
     password: "",
     confirmPassword: "",
-    role: "Visitor",
+    role: "",
   });
   const [passwordError, setPasswordError] = useState("");
   const [formError, setFormError] = useState("");
@@ -63,6 +63,8 @@ export default function SignUp() {
       setTimeout(() => {
         if (role === "Staff") {
           navigate("/staffDashboard");
+        } else if (role === "Volunteer") {
+          navigate("/volunteerDashboard");
         } else {
           navigate("/visitorDashboard");
         }
@@ -87,18 +89,22 @@ export default function SignUp() {
         </div>
       ) : (
         <>
-          <h2>
-            <span role="img" aria-label="paw">
-              🐾
-            </span>{" "}
-            Welcome to ASMS{" "}
-            <span role="img" aria-label="paw">
-              🐾
-            </span>
-          </h2>
+          <h1>Account Sign Up</h1>
           <p>Create an account to adopt, volunteer, and more!</p>
 
           <form onSubmit={handleSubmit} className="signup-login-form">
+            <select
+              id="role"
+              name="role"
+              value={form.role}
+              onChange={handleChange}
+              required
+            >
+            <option value="">-- Select an Account Type --</option>
+            <option value="Visitor">Visitor</option>
+            <option value="Volunteer">Volunteer</option>
+            <option value="Staff">Staff</option>
+            </select>
             <input
               name="name"
               type="text"

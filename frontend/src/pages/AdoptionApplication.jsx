@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { checkAuth } from "../services/api";
 
 export default function AdoptionApplication() {
   const { id: routeAnimalID } = useParams();
+  const navigate = useNavigate();
   const [animals, setAnimals] = useState([]);
   const [animalID, setAnimalID] = useState(routeAnimalID || "");
   const [animalName, setAnimalName] = useState("");
@@ -10,7 +12,27 @@ export default function AdoptionApplication() {
   const [applicantEmail, setApplicantEmail] = useState("");
   const [notes, setNotes] = useState("");
   const [message, setMessage] = useState("");
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+  const [authorized, setAuthorized] = useState(false);
+
+  useEffect(() => {
+    const verify = async () => {
+      try {
+        const user = await checkAuth(); 
+        if (user && user.role === "Visitor") {
+          setAuthorized(true);
+        } else {
+          setAuthorized(false);
+        }
+      } catch (err) {
+        console.error("Authorization error", err);
+        setAuthorized(false);
+      } finally {
+        setLoading(false);
+      }
+    };
+    verify();
+  }, []);
 
   useEffect(() => {
     if (!routeAnimalID) {
@@ -62,12 +84,31 @@ export default function AdoptionApplication() {
     }
   };
 
-  return (  
-    <div className="page-wrapper">
-        <h1>Adoption Application</h1>
-        <form onSubmit={handleSubmit} className="signup-login-form">
+  if (loading) return <p>Loading...</p>;
 
-        <p>{animalName ? "Change your selection:" : "Select an animal to adopt:"}</p>
+  if (!authorized) {
+    return (
+      <main className="signup-login-container">
+        <h1>Adoption Application</h1>
+        <p>You must be logged in as a <strong>Visitor</strong> to apply for adoption.</p>
+        <div style={{ marginTop: "20px" }}>
+          <button onClick={() => navigate("/login")} className="button">
+            Login
+          </button>
+          <button onClick={() => navigate("/signup")} className="button" style={{ marginLeft: "10px" }}>
+            Sign Up
+          </button>
+        </div>
+      </main>
+    );
+  }
+
+  return (
+    <main className="signup-login-container">
+      <h1>Adoption Application</h1>
+      <form onSubmit={handleSubmit} className="signup-login-form">
+
+      <p>{animalName ? "Change your selection:" : "Select an animal to adopt:"}</p>
         <select
           value={animalID}
           onChange={(e) => setAnimalID(e.target.value)}
@@ -84,38 +125,37 @@ export default function AdoptionApplication() {
         {animalName && (
           <div>
             <p>
-              You are applying to adopt <strong>{animalName}</strong> (ID #{animalID})
+              You are applying to adopt <strong>{animalName}</strong><br></br> (ID #{animalID})
             </p>
           </div>
         )}
+        <input
+          type="text"
+          placeholder="Your Name"
+          value={applicantName}
+          onChange={(e) => setApplicantName(e.target.value)}
+          required
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          value={applicantEmail}
+          onChange={(e) => setApplicantEmail(e.target.value)}
+          required
+        />
+        <textarea
+          placeholder="Tell us why you'd like to adopt..."
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+        /><br />
+        <button type="submit">Submit Application</button>
+      </form>
 
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={applicantName}
-            onChange={(e) => setApplicantName(e.target.value)}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            value={applicantEmail}
-            onChange={(e) => setApplicantEmail(e.target.value)}
-            required
-          />
-          <textarea
-            placeholder="Tell us why you'd like to adopt..."
-            value={notes}
-            onChange={(e) => setNotes(e.target.value)}
-          /><br></br>
-          <button type="submit">Submit Application</button>
-        </form>
-
-        {message && (
-          <p className={message.includes("successfully") ? "success-message" : "error-message"}>
-            {message}
-          </p>
-        )}
-      </div>
+      {message && (
+        <p className={message.includes("successfully") ? "success-message" : "error-message"}>
+          {message}
+        </p>
+      )}
+    </main>
   );
 }

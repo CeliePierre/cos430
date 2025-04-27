@@ -49,7 +49,9 @@ export default function NavBar() {
         {/* ✅ Show Dashboard link only when logged in */}
         {isLoggedIn && (
           <Link
-            to={userRole === "Staff" ? "/staffDashboard" : "/visitorDashboard"}
+            to={userRole === "Staff" ? "/staffDashboard" : 
+              userRole === "Volunteer" ? "/volunteerDashboard" :
+              "/visitorDashboard"}
           >
             Dashboard
           </Link>
