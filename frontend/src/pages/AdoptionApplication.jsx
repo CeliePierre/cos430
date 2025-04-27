@@ -41,7 +41,7 @@ export default function AdoptionApplication() {
     }
 
     try {
-      const res = await fetch("http://localhost:5001/adoptionApplications", {
+      const res = await fetch("http://localhost:5001/applications", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -62,66 +62,60 @@ export default function AdoptionApplication() {
     }
   };
 
-  // TODO: Fix formatting
-
-  return (
+  return (  
     <div className="page-wrapper">
-      <h1>Adoption Application</h1>
-      {animalName ? (
-        <p>
-          You are applying to adopt <strong>{animalName}</strong>, ID #
-          {animalID}
-        </p>
-      ) : (
-        <div>
-          <label>Select an animal to adopt: </label>
-          <select
-            value={animalID}
-            className="adoption-form"
-            onChange={(e) => setAnimalID(e.target.value)}
-          >
-            <option value="">-- Choose an animal --</option>
-            {animals.map((animal) => (
-              <option key={animal._id} value={animal._id}>
-                {animal.name} ({animal.species})
-              </option>
-            ))}
-          </select>
-        </div>
-        
-      )}
+        <h1>Adoption Application</h1>
+        <form onSubmit={handleSubmit} className="signup-login-form">
 
-      <form onSubmit={handleSubmit} className="adoption-form">
-        <input
-          type="text"
-          placeholder="Your name"
-          value={applicantName}
-          onChange={(e) => setApplicantName(e.target.value)}
+        <p>{animalName ? "Change your selection:" : "Select an animal to adopt:"}</p>
+        <select
+          value={animalID}
+          onChange={(e) => setAnimalID(e.target.value)}
           required
-        />
-        <input
-          type="email"
-          placeholder="Your email"
-          value={applicantEmail}
-          onChange={(e) => setApplicantEmail(e.target.value)}
-          required
-        />
-        <textarea
-          placeholder="Tell us why you'd like to adopt..."
-          value={notes}
-          onChange={(e) => setNotes(e.target.value)}
-        />
-        <button type="submit">Submit Application</button>
-      </form>
-      {message && (
-        <p
-          className={
-            message.includes("successfully") ? "success-message" : "error-message"
-          }
         >
-          {message}
-        </p>
-      )}
-    </div>
+          <option value="">-- Choose an animal --</option>
+          {animals.map((animal) => (
+            <option key={animal._id} value={animal._id}>
+              {animal.name} ({animal.species})
+            </option>
+          ))}
+        </select>
+
+        {animalName && (
+          <div>
+            <p>
+              You are applying to adopt <strong>{animalName}</strong> (ID #{animalID})
+            </p>
+          </div>
+        )}
+
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={applicantName}
+            onChange={(e) => setApplicantName(e.target.value)}
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            value={applicantEmail}
+            onChange={(e) => setApplicantEmail(e.target.value)}
+            required
+          />
+          <textarea
+            placeholder="Tell us why you'd like to adopt..."
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
+          /><br></br>
+          <button type="submit">Submit Application</button>
+        </form>
+
+        {message && (
+          <p className={message.includes("successfully") ? "success-message" : "error-message"}>
+            {message}
+          </p>
+        )}
+      </div>
   );
 }

@@ -41,24 +41,24 @@ export default function VolunteerApplication() {
   return (
     <div className="page-wrapper">
       <h1>Volunteer Application</h1>
-      <form onSubmit={handleSubmit} className="adoption-form">
+      <form onSubmit={handleSubmit} className="signup-login-form">
         <input
           type="text"
-          placeholder="Your name"
+          placeholder="Your Name"
           value={volunteerName}
           onChange={(e) => setVolunteerName(e.target.value)}
           required
         />
         <input
           type="email"
-          placeholder="Your email"
+          placeholder="Your Email"
           value={volunteerEmail}
           onChange={(e) => setVolunteerEmail(e.target.value)}
           required
         />
         <input
           type="text"
-          placeholder="Your availability (e.g., weekends, weekdays)"
+          placeholder="Your Availability (e.g., weekends, weekdays)"
           value={availability}
           onChange={(e) => setAvailability(e.target.value)}
           required
@@ -67,15 +67,11 @@ export default function VolunteerApplication() {
           placeholder="Tell us about your interests or experience"
           value={interests}
           onChange={(e) => setInterests(e.target.value)}
-        />
+        /><br></br>
         <button type="submit">Submit Application</button>
       </form>
       {message && (
-        <p
-          className={
-            message.includes("successfully") ? "success-message" : "error-message"
-          }
-        >
+        <p className={message.includes("successfully") ? "success-message" : "error-message"}>
           {message}
         </p>
       )}

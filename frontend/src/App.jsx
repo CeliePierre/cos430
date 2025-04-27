@@ -14,6 +14,7 @@ import VisitorDashboard from "./pages/VisitorDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./pages/LoginPage";
 import StaffDashboard from "./pages/StaffDashboard";
+import VolunteerDashboard from "./pages/VolunteerDashboard";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           element={
             <ProtectedRoute>
               <VisitorDashboard />
-            </ProtectedRoute>
+              </ProtectedRoute>
           }
         />
         <Route
@@ -43,7 +44,14 @@ function App() {
             </ProtectedRoute>
           }
         />
-
+        <Route
+          path="/volunteerDashboard"
+          element={
+            <ProtectedRoute>
+              <VolunteerDashboard />
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
