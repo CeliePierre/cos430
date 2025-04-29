@@ -7,8 +7,8 @@ export default function VisitorDashboard() {
       <h1>Visitor Dashboard</h1>
       
       <div className="coming-soon">
-        <h2>Adoption Application</h2>
-        <p>Coming soon! The adoption application will be available soon for visitors to use. Stay tuned!</p>
+        <h2>Application Status</h2>
+        <p>Coming soon! Your submitted adoption applications will be available soon. Stay tuned!</p>
         
         <p>In the meantime, feel free to:</p>
         

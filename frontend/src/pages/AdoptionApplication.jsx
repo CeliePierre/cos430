@@ -8,8 +8,7 @@ export default function AdoptionApplication() {
   const [animals, setAnimals] = useState([]);
   const [animalID, setAnimalID] = useState(routeAnimalID || "");
   const [animalName, setAnimalName] = useState("");
-  const [applicantName, setApplicantName] = useState("");
-  const [applicantEmail, setApplicantEmail] = useState("");
+  const [user, setUser] = useState(null);
   const [notes, setNotes] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(true);
@@ -21,6 +20,7 @@ export default function AdoptionApplication() {
         const user = await checkAuth(); 
         if (user && user.role === "Visitor") {
           setAuthorized(true);
+          setUser(user);
         } else {
           setAuthorized(false);
         }
@@ -57,19 +57,24 @@ export default function AdoptionApplication() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!animalID || !applicantName || !applicantEmail) {
+
+    if (!user) {
+      setMessage("User not loaded. Please try again.");
+      return;
+    }
+    
+    if (!animalID || !notes) {
       setMessage("Please fill in all required fields.");
       return;
     }
 
     try {
-      const res = await fetch("http://localhost:5001/applications", {
+      const res = await fetch("http://localhost:5001/application", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          userID: user._id,
           animalID,
-          applicantName,
-          applicantEmail,
           notes,
         }),
       });
@@ -108,6 +113,13 @@ export default function AdoptionApplication() {
       <h1>Adoption Application</h1>
       <form onSubmit={handleSubmit} className="signup-login-form">
 
+      {animalName && (
+          <div>
+            <p>
+              You are applying to adopt <strong>{animalName}</strong><br></br> (ID #{animalID})
+            </p>
+          </div>
+        )}
       <p>{animalName ? "Change your selection:" : "Select an animal to adopt:"}</p>
         <select
           value={animalID}
@@ -122,14 +134,7 @@ export default function AdoptionApplication() {
           ))}
         </select>
 
-        {animalName && (
-          <div>
-            <p>
-              You are applying to adopt <strong>{animalName}</strong><br></br> (ID #{animalID})
-            </p>
-          </div>
-        )}
-        <input
+        {/* <input
           type="text"
           placeholder="Your Name"
           value={applicantName}
@@ -142,7 +147,7 @@ export default function AdoptionApplication() {
           value={applicantEmail}
           onChange={(e) => setApplicantEmail(e.target.value)}
           required
-        />
+        /> */}
         <textarea
           placeholder="Tell us why you'd like to adopt..."
           value={notes}
