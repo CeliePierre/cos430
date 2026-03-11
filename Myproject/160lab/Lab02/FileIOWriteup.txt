@@ -1,0 +1,29 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+Please leave the font at 12 pt.  Answers are in the lab instructions or 
+in reading comments and code. The Java API has answers too. 
+========================================================================
+1. What does System.err.println("some message."); do? Be specific.
+
+
+========================================================================
+2. What is a unit test? 
+
+
+========================================================================
+3. When we catch a FileNotFoundException on trying to open a file for 
+   input, it means there is no file with that name on disk.  What does 
+   it mean when we catch a FileNotFoundException on trying to open a 
+   file for output?
+
+
+========================================================================
+4. String.format(), printf, and StringBuilder were all used in 
+   this project.  Why did we need the StringBuilder in Orders?
+
+
+========================================================================
+5. In String.format() (or printf) What does the descriptor "%08d" do?
+
+
+========================================================================
+6. What was the hardest part of this lab for you and why was it hard.

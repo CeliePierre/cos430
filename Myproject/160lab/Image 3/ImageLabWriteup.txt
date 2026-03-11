@@ -1,0 +1,24 @@
+Please leave this file as a txt file. This makes it easier for me to 
+grade.  Start your answer on the line UNDER the question.
+Do Not allow your lines to be longer than the line of "=" characters.
+This lets me enlarge the text in brightspace so I can read it!
+Look back a at the project or the instructions as you answer.
+========================================================================
+1.  What is the point of the revision history comments at the top of the
+    file?
+
+========================================================================
+2.  What is the data type of originalImage.image[row][col]? (domain and 
+    range) Is that a valid value for an index into the histogram array?
+
+========================================================================
+3.  
+
+========================================================================
+4. 
+
+========================================================================
+5. 
+
+========================================================================
+6. What was the hardest part of this lab for you and why was it hard.

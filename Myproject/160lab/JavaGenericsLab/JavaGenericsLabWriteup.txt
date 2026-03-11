@@ -1,0 +1,46 @@
+
+========================================================================
+1.  What does it mean to "parameterize a data type"?
+To parameterize a data type means to make it generic or abstract, 
+allowing it to take on different types of values. This is often done 
+to make a class or function more flexible and reusable
+across different scenarios and data types.
+========================================================================
+2.  In the Generic versions of our classes, what does 
+    <E extends Comparable<? super E>> mean?  
+In the generic version of a class, the notation <E extends Comparable
+<? super E>> means that the generic type E must implement the Comparable
+interface, and the type parameter for Comparable must be a supertype of E. 
+This allows objects of type E to be compared with
+each other using the compareTo() method.
+========================================================================
+3.  In our ArrayList class, we still used an array as the underlying 
+    data structure.  What data type did we declare it to be and why was
+    that necessary?
+In the ArrayList class, the underlying data structure is declared to be
+an array of type Object. This is necessary because arrays in Java must be
+declared with a specific data type, but we want our ArrayList to be able 
+to hold objects of any type. By using Object as the data type for the array
+,we can store any type of object in the ArrayList.
+========================================================================
+4.  In SuperAndSub, what do the default constructors for each of the 
+    classes do?
+In the SuperAndSub class, the default constructor for the SuperClass does 
+nothing, while the default constructor for the SubClass calls the default 
+constructor for the SuperClass using the super() keyword.
+========================================================================
+5.  In SuperAndSub, when the SubClass object is created which class 
+    constructor completes execution first?  Why do you think that is
+    the case? (you need to trace the execution if you don't know the 
+    answer)
+
+When the SubClass object is created in SuperAndSub, the SuperClass constructor
+completes execution first. This is because the SubClass constructor calls the 
+SuperClass constructor using the super() keyword, and the superclass constructor
+is always executed before the subclass constructor.
+
+========================================================================
+6.  What was the hardest part of this lab for you and why was it hard.
+For this lab, it wasn't very difficult since you had already explained 
+everything in the assignment instructions. I did encounter some errors
+with my ArrayList, but I was able to fix them already

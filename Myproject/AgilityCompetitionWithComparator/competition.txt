@@ -1,0 +1,200 @@
+Jemima		10	9	2014 Border Collie
+20	Damon	0	3	65	101
+Martha		5	3	2015 Toy Poodle
+8	Josephine	0	1	30	28
+Sloane		23	9	2009 Spaniel
+38	Xander	0	0	58	63
+Francis		23	10	2011 Spaniel Mix
+13	Lenore	0	9	26	57
+Eleanor		25	4	2012 Spaniel Mix
+28	Inga	0	5	26	4
+Nayda		16	1	2015 Spaniel
+45	Chandler	0	3	14	42
+Nigel		9	9	2014 Spaniel Mix
+29	Fulton	0	2	58	2
+Indira		3	7	2007 Husky
+54	Brenna	0	9	44	13
+Rhiannon	29	6	2011 Husky
+66	Drake	0	2	27	28
+Shay		29	4	2011 Husky
+69	Shaeleigh	0	4	53	24
+Rebekah		3	4	2009 Husky
+44	Ishmael	0	1	14	89
+Gisela		4	11	2015 Husky
+47	Camden	0	1	55	41
+Gareth		24	7	2009 Spaniel Mix
+38	Yvonne	0	1	6	94
+Trevor		9	8	2011 Border Collie
+36	Jane	0	1	31	21
+Sasha		5	7	2014 Collie
+46	Leslie	0	1	11	78
+Keaton		21	2	2015 Border Collie
+15	Madison	0	1	35	76
+Emmanuel	9	1	2008 Border Collie
+39	Meghan	0	1	1	3
+Claudia		17	2	2007 Border Collie
+13	Sylvia	0	1	17	20
+Rhonda		30	2	2013 Spaniel
+22	Rinah	0	1	27	36
+Lilah		13	5	2009 Spaniel
+26	Thane	0	1	32	85
+Guinevere	15	5	2008 Spaniel
+33	Lynn	0	0	56	77
+Garth		19	6	2013 Border Collie
+24	Regan	0	1	8	47
+Samson		1	11	2007 Spaniel
+37	Leah	0	0	53	77
+Keith		8	1	2010 Border Collie
+29	Lydia	0	1	27	76
+Fatima		21	5	2010 Irish Setter
+48	Drew	0	0	56	80
+Mason		17	8	2009 Mini Poodle
+19	Raymond	0	1	10	94
+Stacey		18	2	2013 Irish Setter
+43	Kellie	0	1	14	59
+Colette		25	4	2008 Toy Poodle
+10	Avram	0	0	49	2
+Sloane		24	6	2009 Toy Poodle
+10	Jared	0	0	58	46
+Britanney	26	8	2015 Border Collie
+16	Flavia	0	1	3	80
+Rebekah		13	4	2011 Toy Poodle
+9	Sara	0	1	12	52
+Nadine		24	7	2014 Spaniel
+34	Xenos	0	1	44	70
+Candice		12	8	2009 Border Collie
+12	Leigh	0	1	41	42
+Plato		24	10	2014 Irish Setter
+49	Azalia	0	0	65	101
+Liberty		30	11	2014 Spaniel
+36	Kathleen	0	1	26	52
+Fatima		14	11	2009 Irish Setter
+60	Rhona	0	0	52	10
+Tarik		20	8	2012 Toy Poodle
+12	Dieter	0	1	15	33
+Jonas		26	1	2015 King Charles Spaniel
+26	Dai	0	1	46	10
+Roary		4	1	2014 Spaniel
+38	Heather	0	1	30	97
+Eugenia		8	6	2013 Irish Setter
+59	Ashton	0	1	6	43
+Vincent		11	8	2013 Spaniel
+43	Galena	0	1	40	11
+Callum		19	9	2015 Irish Setter
+65	Vladimir	0	1	22	13
+Arsenio		31	1	2008 Toy Poodle
+13	Patrick	0	1	50	96
+Alexander	12	3	2010 Spaniel
+35	Dai	0	1	21	9
+Lydia		29	5	2010 Collie
+63	Mikayla	0	1	7	14
+Selma		27	11	2008 Irish Setter
+69	Alan	0	1	23	45
+Tucker		29	1	2008 Mini Poodle
+15	Paula	0	1	5	79
+Martena		3	10	2008 Mini Poodle
+16	Kylee	0	1	13	21
+Kessie		13	9	2008 Collie
+52	Libby	0	1	11	2
+Ray		9	9	2010 Irish Setter
+59	Noel	0	1	19	56
+Jerome		9	11	2010 Toy Poodle
+7	Malcolm	0	1	44	84
+Yael		15	4	2014 Mini Poodle
+15	Kendall	0	1	7	96
+Kato		28	7	2009 King Charles Spaniel
+36	Clayton	0	1	15	50
+Kirby		21	11	2014 Irish Setter
+67	Zoe	0	1	34	36
+Vanna		22	3	2011 Irish Setter
+50	Zachary	0	1	30	42
+Lawrence	15	2	2015 Collie
+41	Brett	0	1	6	38
+Chastity	18	9	2014 Spaniel
+26	Keaton	0	1	5	69
+Jessica		26	11	2013 Irish Setter
+53	Isaac	0	1	49	60
+Ray		6	9	2009 Border Collie
+20	Quamar	0	1	24	80
+Maggie		15	8	2007 Irish Setter
+54	Colby	0	1	7	43
+Anne		10	10	2014 Irish Setter
+54	Autumn	0	1	2	1
+Iris		3	6	2008 King Charles Spaniel
+31	Ginger	0	1	17	7
+Francesca	23	5	2013 Spaniel
+32	Benjamin	0	1	33	6
+Jayme		29	1	2011 King Charles Spaniel
+34	David	0	1	21	25
+Quemby		23	6	2009 Irish Setter
+73	Cyrus	0	0	59	29
+Lydia		26	1	2010 Irish Setter
+64	Lana	0	1	34	62
+Christine	19	11	2009 Collie
+57	Avram	0	1	29	77
+Thane		12	6	2011 Collie
+45	Vernon	0	1	42	83
+Kyle		4	7	2009 Irish Setter
+64	Karina	0	1	13	60
+Eaton		1	4	2013 Spaniel
+35	Jorden	0	0	50	8
+Jelani		30	10	2010 Irish Setter
+66	Joy	0	1	18	72
+Chaim		18	9	2011 Irish Setter
+53	Aspen	0	1	15	54
+Frances		21	9	2012 Collie
+41	Ora	0	1	4	97
+Kaitlin		27	10	2012 Irish Setter
+60	Peter	0	1	49	5
+Anika		4	2	2010 Irish Setter
+60	Cleo	0	1	19	48
+Kimberly	17	2	2011 Spaniel
+30	Lilah	0	1	36	37
+Quinlan		1	10	2007 Irish Setter
+50	Jillian	0	1	24	80
+Omar		8	5	2009 Irish Setter
+62	David	0	0	59	93
+Armand		30	11	2008 Irish Setter
+61	Rajah	0	0	56	78
+Hedwig		24	6	2010 Border Collie
+28	Tanisha	0	1	47	51
+Yeo		14	7	2014 Spaniel
+38	Alea	0	1	34	87
+Burton		12	10	2011 Spaniel
+36	Jonah	0	1	37	7
+Claudia		16	8	2008 Border Collie
+24	Adena	0	1	18	43
+Tasha		23	7	2015 Toy Poodle
+9	Peter	0	1	32	78
+Price		31	2	2009 Border Collie
+22	Asher	0	1	37	67
+Castor		11	5	2008 Toy Poodle
+8	May	0	1	52	95
+Bernard		30	6	2009 Border Collie
+29	Kirsten	0	0	52	36
+Kelly		12	1	2013 Collie
+36	Fay	0	1	18	60
+Grace		4	3	2007 Collie
+40	Winter	0	1	11	63
+Felix		4	10	2010 Border Collie
+28	Pandora	0	1	24	93
+Gay		22	8	2015 Toy Poodle
+67	Tanisha	0	1	16	92
+Francis		18	10	2012 Collie
+43	Martha	0	1	16	65
+Kermit		11	6	2015 Collie
+36	Harper	0	1	25	41
+Maryam		7	4	2015 Spaniel Mix
+30	Yeo	0	1	50	93
+Acton		27	6	2008 Spaniel
+50	Burke	0	1	28	78
+Diana		24	7	2012 Toy Poodle
+7	Gisela	0	1	34	71
+Colt		6	11	2009 Border Collie
+25	Bryar	0	1	15	30
+Helen		5	9	2007 King Charles Spaniel
+29	Judith	0	1	44	12
+Delilah		25	5	2010 Toy Poodle
+9	Mira	0	1	41	28
+Dante		2	6	2015 King Charles Spaniel
+26	Evelyn	0	1	38	91

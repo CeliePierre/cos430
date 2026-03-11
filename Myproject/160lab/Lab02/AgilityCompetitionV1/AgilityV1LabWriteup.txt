@@ -1,0 +1,33 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1. The UML for a class has 3 sections. What feature of the class goes
+   in each section. 
+The class header, the attributes (properties), and the operations (methods). 
+The class header includes the class name and any inheritance or implementation information. 
+The attributes section lists the properties of the class, 
+including the property name, type, and visibility. 
+The operations section lists the methods of the class, including the method name, parameters, and return type.
+
+========================================================================
+2. Syntax is always expressed in general terms.  The syntax for the 
+   declaration of a variable is:       dataType identifier;
+   Looking at the UML, what is the UML syntax for a property?
+
+The UML syntax for a property is usually shown as an attribute with its name, type, and visibility. The visibility can be represented by + (public), - (private), # (protected), or (package) before the name of the attribute.For example: name: String
+
+========================================================================
+3. What is the UML syntax for a method?
+The UML syntax for a method is usually shown as an operation with its name, parameters, and return type. The visibility can be represented by + (public), - (private), # (protected), or (package) before the name of the operation. For example:
+getName(): String
+
+========================================================================
+4. What is the purpose of the compareTo() method in the Comparable 
+   Interface? (it's in the comments.)
+
+I think The purpose of the compareTo() method in the Comparable Interface is to allow objects of the implementing class to be compared to each other. The compareTo() method should return a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object. This is useful for sorting and searching for objects of the class.
+
+========================================================================
+5. What was the hardest part of this lab for you and why was it hard.
+
+The hardest part of this lab was struggling to understood the syntax of UML or the purpose of the compareTo() method. Additionally, honestly have struggled with translating the UML into Java code.
+

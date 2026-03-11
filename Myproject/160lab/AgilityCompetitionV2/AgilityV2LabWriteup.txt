@@ -1,0 +1,27 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1. What does it mean to say "Pet inherits from Dog"?  
+Its means that the Pet class is a subclass of the Dog class, 
+and therefore it inherits all the properties and methods of 
+the Dog class. This means that any object created from 
+the Pet class can use the properties and methods defined in
+the Dog class, in addition to any properties and
+ methods specific to the Pet class. its Just the idea I got 
+========================================================================
+2. Why does Dog depend on Date, but Pet and Competitor don't?
+The Dog class depends on the Date class because it has a property
+called "birthdate" which is of type Date. 
+In contrast, Pet and Competitor do not have any properties 
+that depend on the Date class, so they do not need to import it.
+========================================================================
+3. Why are there parameters in the Competitor constructor that are not
+   properties of Competitor?
+It's possible that the parameters in the Competitor constructor 
+that are not properties of Competitor are being used to
+initialize properties of a superclass that Competitor inherits from. 
+Alternatively, they could be used to initialize local variables within 
+the constructor that are not stored as properties of the Competitor class.
+
+========================================================================
+4. What was the hardest part of this lab for you and why was it hard.
+One of the hardest parts of this lab could be understanding the implementation of inheritance and interfaces in Java. The driver class extends no other class but uses the Comparable interface to compare competitor objects. 

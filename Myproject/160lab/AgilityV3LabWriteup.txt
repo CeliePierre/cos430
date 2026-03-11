@@ -1,0 +1,35 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1.  What is the effect of declaring a class to be abstract?
+I can explain the effect of declaring in my idea declaring a class 
+as abstract means that the class cannot be instantiated directly. 
+Instead, it serves as a template or base class for other classes 
+to inherit from. An abstract class may contain abstract methods, 
+concrete methods, and instance variables. Abstract methods are methods 
+that do not have a method body, and subclasses that extend  
+the abstract class must provide an implementation for them. 
+========================================================================
+2.  What is the effect of declaring methods to be abstract?
+I mean declaring a method as abstract means that the method does not have 
+an implementation in the current class, and any class that inherits 
+from it must provide its own implementation. Because 
+Abstract methods can only exist in abstract classes or interfaces.
+========================================================================
+3.  How many classes can one class extend?
+A class in Java can extend only one other class, 
+but it can implement multiple interfaces.
+========================================================================
+4.  How many Interfaces can one class implement?
+A class in Java can implement any number of interfaces.
+
+========================================================================
+5.  Can an abstract class be instantiated?
+No, an abstract class cannot be instantiated directly. It can only be
+used as a base class for other classes to inherit from.
+
+========================================================================
+6. What was the hardest part of this lab for you and why was it hard.
+
+the lab VetClinicDriver was Additionally,understanding how to properly handle 
+exceptions and error messages may also be challenging. may hard part was in class
+VetClinicDriver I make mistake of number .

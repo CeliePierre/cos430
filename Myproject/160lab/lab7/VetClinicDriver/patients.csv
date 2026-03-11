@@ -1,0 +1,101 @@
+patient num,name,day,month,year,breed,weight,owner
+50136,Claudia,17,2,2006,Border Collie,13,Sylvia
+70258,Grace,4,3,2007,Collie,40,Winter
+50131,Indira,3,7,2008,Husky,54,Brenna
+70272,Maggie,15,8,2009,Irish Setter,54,Colby
+50124,Helen,5,9,2009,King Charles Spaniel,29,Judith
+70262,Quinlan,1,10,2009,Irish Setter,50,Jillian
+50127,Samson,1,11,2010,Spaniel,37,Leah
+70271,Emmanuel,9,1,2011,Border Collie,39,Meghan
+40567,Tucker,29,1,2011,Mini Poodle,15,Paula
+50128,Arsenio,31,1,2011,Toy Poodle,13,Patrick
+40573,Colette,25,4,2011,Toy Poodle,10,Avram
+40604,Castor,11,5,2011,Toy Poodle,8,May
+50132,Guinevere,15,5,2011,Spaniel,33,Lynn
+40645,Iris,3,6,2011,King Charles Spaniel,31,Ginger
+50133,Acton,27,6,2011,Spaniel,50,Burke
+40582,Claudia,16,8,2011,Border Collie,24,Adena
+70267,Kessie,13,9,2011,Collie,52,Libby
+40654,Martena,3,10,2011,Mini Poodle,16,Kylee
+50129,Selma,27,11,2011,Irish Setter,69,Alan
+70260,Armand,30,11,2011,Irish Setter,61,Rajah
+50125,Price,31,2,2012,Border Collie,22,Asher
+50145,Rebekah,3,4,2012,Husky,44,Ishmael
+40653,Omar,8,5,2012,Irish Setter,62,David
+50140,Lilah,13,5,2012,Spaniel,26,Thane
+70259,Quemby,23,6,2012,Irish Setter,73,Cyrus
+40577,Sloane,24,6,2012,Toy Poodle,10,Jared
+50138,Bernard,30,6,2012,Border Collie,29,Kirsten
+40568,Kyle,4,7,2012,Irish Setter,64,Karina
+50139,Gareth,24,7,2012,Spaniel Mix,38,Yvonne
+40588,Kato,28,7,2012,King Charles Spaniel,36,Clayton
+40569,Candice,12,8,2012,Border Collie,12,Leigh
+50134,Mason,17,8,2012,Mini Poodle,19,Raymond
+70270,Ray,6,9,2012,Border Collie,20,Quamar
+40575,Sloane,23,9,2012,Spaniel  ,38,Xander
+70261,Colt,6,11,2012,Border Collie,25,Bryar
+40587,Fatima,14,11,2012,Irish Setter,60,Rhona
+50144,Christine,19,11,2012,Collie,57,Avram
+40592,Keith,8,1,2013,Border Collie,29,Lydia
+40613,Lydia,26,1,2013,Irish Setter,64,Lana
+70269,Anika,4,2,2013,Irish Setter,60,Cleo
+40622,Alexander,12,3,2013,Spaniel,35,Dai
+40597,Fatima,21,5,2013,Irish Setter,48,Drew
+50130,Delilah,25,5,2013,Toy Poodle,9,Mira
+40586,Lydia,29,5,2013,Collie,63,Mikayla
+40603,Hedwig,24,6,2013,Border Collie,28,Tanisha
+40618,Ray,9,9,2013,Irish Setter,59,Noel
+40580,Felix,4,10,2013,Border Collie,28,Pandora
+40633,Jelani,30,10,2013,Irish Setter,66,Joy
+40607,Jerome,9,11,2013,Toy Poodle,7,Malcolm
+40601,Jayme,29,1,2014,King Charles Spaniel,34,David
+50126,Kimberly,17,2,2014,Spaniel,30,Lilah
+40599,Vanna,22,3,2014,Irish Setter,50,Zachary
+70268,Rebekah,13,4,2014,Toy Poodle,9,Sara
+40615,Shay,29,4,2014,Husky,69,Shaeleigh
+40627,Thane,12,6,2014,Collie,45,Vernon
+40606,Rhiannon,29,6,2014,Husky,66,Drake
+40598,Trevor,9,8,2014,Border Collie,36,Jane
+50143,Chaim,18,9,2014,Irish Setter,53,Aspen
+40579,Burton,12,10,2014,Spaniel,36,Jonah
+70266,Francis,23,10,2014,Spaniel Mix,13,Lenore
+40620,Eleanor,25,4,2015,Spaniel Mix,28,Inga
+40594,Diana,24,7,2015,Toy Poodle,7,Gisela
+50137,Tarik,20,8,2015,Toy Poodle,12,Dieter
+40625,Frances,21,9,2015,Collie,41,Ora
+40610,Francis,18,10,2015,Collie,43,Martha
+70265,Kaitlin,27,10,2015,Irish Setter,60,Peter
+40576,Kelly,12,1,2016,Collie,36,Fay
+50123,Stacey,18,2,2016,Irish Setter,43,Kellie
+40626,Rhonda,30,2,2016,Spaniel,22,Rinah
+40584,Eaton,1,4,2016,Spaniel,35,Jorden
+40571,Francesca,23,5,2016,Spaniel,32,Benjamin
+70264,Eugenia,8,6,2016,Irish Setter,59,Ashton
+40617,Garth,19,6,2016,Border Collie,24,Regan
+40629,Vincent,11,8,2016,Spaniel,43,Galena
+40619,Jessica,26,11,2016,Irish Setter,53,Isaac
+70263,Roary,4,1,2017,Spaniel,38,Heather
+40631,Yael,15,4,2017,Mini Poodle,15,Kendall
+40595,Sasha,5,7,2017,Collie,46,Leslie
+40590,Yeo,14,7,2017,Spaniel,38,Alea
+40636,Nadine,24,7,2017,Spaniel,34,Xenos
+40609,Nigel,9,9,2017,Spaniel Mix,29,Fulton
+50141,Jemima,10,9,2017,Border Collie,20,Damon
+40639,Chastity,18,9,2017,Spaniel,26,Keaton
+40611,Anne,10,10,2017,Irish Setter,54,Autumn
+40581,Plato,24,10,2017,Irish Setter,49,Azalia
+40612,Kirby,21,11,2017,Irish Setter,67,Zoe
+40632,Liberty,30,11,2017,Spaniel,36,Kathleen
+40643,Nayda,16,1,2018,Spaniel,45,Chandler
+40635,Jonas,26,1,2018,King Charles Spaniel,26,Dai
+40574,Lawrence,15,2,2018,Collie,41,Brett
+50142,Keaton,21,2,2018,Border Collie,15,Madison
+40651,Martha,5,3,2018,Toy Poodle,8,Josephine
+40637,Maryam,7,4,2018,Spaniel Mix,30,Yeo
+40648,Dante,2,6,2018,King Charles Spaniel,26,Evelyn
+40605,Kermit,11,6,2018,Collie,36,Harper
+40608,Tasha,23,7,2018,Toy Poodle,9,Peter
+40614,Gay,22,8,2018,Toy Poodle,67,Tanisha
+40641,Britanney,26,8,2018,Border Collie,16,Flavia
+40578,Callum,19,9,2018,Irish Setter,65,Vladimir
+50135,Gisela,4,11,2018,Husky,47,Camden

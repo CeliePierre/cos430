@@ -1,0 +1,202 @@
+40582	16	8	2011	Border Collie	
+24	Claudia	Adena
+50125	31	2	2012	Border Collie	
+22	Price	Asher
+70261	6	11	2012	Border Collie	
+25	Colt	
+50141	10	9	2017	Border Collie	
+20	Jemima	Damon
+40641	26	8	2018	Border Collie	
+16	Britanney	Flavia
+40598	9	8	2014	Border Collie	
+36	Trevor	Jane
+50138	30	6	2012	Border Collie	
+29	Bernard	Kirsten
+40569	12	8	2012	Border Collie	
+12	Candice	Leigh
+40592	8	1	2013	Border Collie	
+29	Keith	Lydia
+50142	21	2	2018	Border Collie	
+15	Keaton	Madison
+70271	9	1	2011	Border Collie	
+39	Emmanuel	
+40580	4	10	2013	Border Collie	
+28	Felix	Pandora
+70270	6	9	2012	Border Collie	
+20	Ray	
+40617	19	6	2016	Border Collie	
+24	Garth	Regan
+50136	17	2	2006	Border Collie	
+13	Claudia	Sylvia
+40603	24	6	2013	Border Collie	
+28	Hedwig	Tanisha
+50144	19	11	2012	Collie	
+57	Christine	Avram
+40574	15	2	2018	Collie	
+41	Lawrence	Brett
+40576	12	1	2016	Collie	
+36	Kelly	Fay
+40605	11	6	2018	Collie	
+36	Kermit	Harper
+40595	5	7	2017	Collie	
+46	Sasha	Leslie
+70267	13	9	2011	Collie	
+52	Kessie	
+40610	18	10	2015	Collie	
+43	Francis	Martha
+40586	29	5	2013	Collie	
+63	Lydia	Mikayla
+40625	21	9	2015	Collie	
+41	Frances	Ora
+40627	12	6	2014	Collie	
+45	Thane	Vernon
+70258	4	3	2007	Collie	
+40	Grace	
+50131	3	7	2008	Husky	
+54	Indira	Brenna
+50135	4	11	2018	Husky	
+47	Gisela	Camden
+40606	29	6	2014	Husky	
+66	Rhiannon	Drake
+50145	3	4	2012	Husky	
+44	Rebekah	Ishmael
+40615	29	4	2014	Husky	
+69	Shay	Shaeleigh
+50129	27	11	2011	Irish Setter	
+69	Selma	Alan
+70264	8	6	2016	Irish Setter	
+59	Eugenia	
+50143	18	9	2014	Irish Setter	
+53	Chaim	Aspen
+40611	10	10	2017	Irish Setter	
+54	Anne	Autumn
+40581	24	10	2017	Irish Setter	
+49	Plato	Azalia
+70269	4	2	2013	Irish Setter	
+60	Anika	
+70272	15	8	2009	Irish Setter	
+54	Maggie	
+70259	23	6	2012	Irish Setter	
+73	Quemby	
+40653	8	5	2012	Irish Setter	
+62	Omar	David
+40597	21	5	2013	Irish Setter	
+48	Fatima	Drew
+40619	26	11	2016	Irish Setter	
+53	Jessica	Isaac
+70262	1	10	2009	Irish Setter	
+50	Quinlan	
+40633	30	10	2013	Irish Setter	
+66	Jelani	Joy
+40568	4	7	2012	Irish Setter	
+64	Kyle	Karina
+50123	18	2	2016	Irish Setter	
+43	Stacey	Kellie
+40613	26	1	2013	Irish Setter	
+64	Lydia	Lana
+40618	9	9	2013	Irish Setter	
+59	Ray	Noel
+70265	27	10	2015	Irish Setter	
+60	Kaitlin	
+70260	30	11	2011	Irish Setter	
+61	Armand	
+40587	14	11	2012	Irish Setter	
+60	Fatima	Rhona
+40578	19	9	2018	Irish Setter	
+65	Callum	Vladimir
+40599	22	3	2014	Irish Setter	
+50	Vanna	Zachary
+40612	21	11	2017	Irish Setter	
+67	Kirby	Zoe
+40588	28	7	2012	King Charles Spaniel	
+36	Kato	Clayton
+40635	26	1	2018	King Charles Spaniel	
+26	Jonas	Dai
+40601	29	1	2014	King Charles Spaniel	
+34	Jayme	David
+40648	2	6	2018	King Charles Spaniel	
+26	Dante	Evelyn
+40645	3	6	2011	King Charles Spaniel	
+31	Iris	Ginger
+50124	5	9	2009	King Charles Spaniel	
+29	Helen	Judith
+40631	15	4	2017	Mini Poodle	
+15	Yael	Kendall
+40654	3	10	2011	Mini Poodle	
+16	Martena	Kylee
+40567	29	1	2011	Mini Poodle	
+15	Tucker	Paula
+50134	17	8	2012	Mini Poodle	
+19	Mason	Raymond
+40590	14	7	2017	Cavalier King Charles Spaniel	
+38	Yeo	Alea
+40571	23	5	2016	Cocker Spaniel	
+32	Francesca	Benjamin
+50133	27	6	2011	Cocker Spaniel	
+50	Acton	Burke
+40643	16	1	2018	Cavalier King Charles Spaniel	
+45	Nayda	Chandler
+40622	12	3	2013	English Springer Spaniel 	
+35	Alexander	Dai
+40629	11	8	2016	English Springer Spaniel	
+43	Vincent	Galena
+70263	4	1	2017	American Water Spaniel	
+38	Roary	
+40579	12	10	2014	American Water Spaniel	
+36	Burton	Jonah
+40584	1	4	2016	Cavalier King Charles Spaniel	
+35	Eaton	Jorden
+40632	30	11	2017	English Springer Spaniel	
+36	Liberty	Kathleen
+40639	18	9	2017	American Water Spaniel	
+26	Chastity	Keaton
+50127	1	11	2010	Cavalier King Charles Spaniel	
+37	Samson	Leah
+50126	17	2	2014	Cocker Spaniel	
+30	Kimberly	Lilah
+50132	15	5	2011	Cavalier King Charles Spaniel	
+33	Guinevere	Lynn
+40626	30	2	2016	American Water Spaniel	
+22	Rhonda	Rinah
+50140	13	5	2012	English Cocker Spaniel	
+26	Lilah	Thane
+40636	24	7	2017	American Water Spaniel	
+34	Nadine	Xenos
+40575	23	9	2012	English Springer Spaniel  	
+38	Sloane	Xander
+40609	9	9	2017	Spaniel Mix	
+29	Nigel	Fulton
+40620	25	4	2015	Spaniel Mix	
+28	Eleanor	Inga
+70266	23	10	2014	Spaniel Mix	
+13	Francis	
+40637	7	4	2018	Spaniel Mix	
+30	Maryam	Yeo
+50139	24	7	2012	Spaniel Mix	
+38	Gareth	Yvonne
+40573	25	4	2011	Toy Poodle	
+10	Colette	Avram
+50137	20	8	2015	Toy Poodle	
+12	Tarik	Dieter
+40594	24	7	2015	Toy Poodle	
+7	Diana	Gisela
+40577	24	6	2012	Toy Poodle	
+10	Sloane	Jared
+40651	5	3	2018	Toy Poodle	
+8	Martha	Josephine
+40607	9	11	2013	Toy Poodle	
+7	Jerome	Malcolm
+40604	11	5	2011	Toy Poodle	
+8	Castor	May
+50130	25	5	2013	Toy Poodle	
+9	Delilah	Mira
+50128	31	1	2011	Toy Poodle	
+13	Arsenio	Patrick
+40608	23	7	2018	Toy Poodle	
+9	Tasha	Peter
+70268	13	4	2014	Toy Poodle	
+9	Rebekah	
+40614	22	8	2018	Toy Poodle	
+67	Gay	Tanisha
+40789   10      10      2006    Toy Poodle
+10.2    Eudora  Anne

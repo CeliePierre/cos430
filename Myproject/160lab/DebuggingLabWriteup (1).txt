@@ -1,0 +1,14 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1.  Problems observed in play Without the Debugger (I found 3)
+
+========================================================================
+2.  Problems seen in memory using the Debugger  (I found 9)
+    Specify the line number and what is wrong with the memory value
+    1. Line: 
+
+========================================================================
+3.  Problems fixed: Line number and new code
+     
+========================================================================
+4. What was the hardest part of this lab for you and why was it hard?

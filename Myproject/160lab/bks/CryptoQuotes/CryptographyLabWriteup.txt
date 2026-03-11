@@ -1,0 +1,19 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1.  Briefly explain random key cryptography.
+
+========================================================================
+2.  Look at an ASCII chart and explain the correction we used (97). Why
+    was that necessary?
+
+========================================================================
+3. Explain Integer Errors. How do we prevent them?
+
+========================================================================
+4. Explain input errors.  How do we prevent them?
+
+========================================================================
+5. What was the quote that you solved?
+
+========================================================================
+6. What was the hardest part of this lab for you and why was it hard.

@@ -1,0 +1,19 @@
+-d
+/Users/kalalajoel/Desktop/290lab/290CSC/Part02J/build/classes
+-classpath
+"/Users/kalalajoel/Desktop/290lab/290CSC/Part02J/build/classes:/Users/kalalajoel/Desktop/Part01 2/SongSearch.jar:/Users/kalalajoel/Desktop/290lab/SongSearch.jar"
+-sourcepath
+/Users/kalalajoel/Desktop/290lab/290CSC/Part02J/build/empty
+-target
+18
+-encoding
+UTF-8
+-g
+-processorpath
+"/Users/kalalajoel/Desktop/Part01 2/SongSearch.jar:/Users/kalalajoel/Desktop/290lab/SongSearch.jar:/Users/kalalajoel/Desktop/290lab/290CSC/Part02J/build/empty"
+-s
+/Users/kalalajoel/Desktop/290lab/290CSC/Part02J/build/generated-sources/ap-source-output
+-source
+18
+/Users/kalalajoel/Desktop/290lab/290CSC/Part02J/src/student/SearchByArtistPrefix.java
+/Users/kalalajoel/Desktop/290lab/290CSC/Part02J/src/student/Song.java

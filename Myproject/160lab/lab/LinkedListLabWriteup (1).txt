@@ -1,0 +1,12 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1. This is a new lab.  What is the coolest thing you learned in this lab?
+The coolest thing I learned in this lab was how to create a linked list and how to use the methods in the LinkedList class to add, remove, and set elements in the list.
+
+
+========================================================================
+2. What things can I make better about this lab?
+I think One thing that could be improved about this lab is to provide more examples of how to use the methods in the LinkedList class.
+========================================================================
+3. What was the hardest part of this lab for you and why was it hard.
+the hardest part of this lab for me was understanding how to use the indexOf() method.

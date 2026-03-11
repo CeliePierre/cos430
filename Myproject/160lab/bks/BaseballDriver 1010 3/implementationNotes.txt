@@ -1,0 +1,151 @@
+Implementation Notes for the Play Ball! Project
+
+
+IMPORTANT NOTE: The test data set included with the project has randomly generated
+count values.  They are intended to be plausible values(no one has 10,000,000
+home runs) but they may be inconsistent in that the sum of plate appearances
+by all pitchers will not equal the sum of plate appearances by all position
+players.  If you see any egregiously inappropriate values, like more home runs
+than plate appearances, or negative values, or the data is not formated 
+to spec, please do bring it to my attention.
+
+The basic assignment performs very little calculation, but is essentially
+a data store and retrieval using Map and possibly List object of Java
+Collections.  Don't forget as you code that division by 0 is undefined.
+Your program won't crash, but some statistics will be defined as "infinity"
+which should really mess with your aggragate stats.
+
+The first task is to define the data members for the classes Player,
+Pitcher, and PositionPlayer.  They must all be private, but you can
+define protected getters or setters in Player for those you need to
+access so that the subclasses can use them.  It is generally prudent
+to only provide as much access as you need in accomplishing the 
+other operations.
+
+You will need to define constructors for all of them and toString
+methods for all of them.  I have provided you with unit tests. 
+You should test each unit (except Player which is abstract) as 
+you complete it.
+
+Once these three basic classes are constructed, you can define the 
+Team class.  Define the needed data members.  A Map<Integer,Player>
+object can provide direct lookup by player number, and still allows
+iteration.
+
+You may additionally define data members to support the hitting and
+pitching aggregate statistics by counting the players of each kind
+and aggregating the counts(the common data fields will each have to
+have separate aggregate counts, one for each player kind) as you
+load the players. 
+
+Alternatively, you can iterate over the roster to calculate the
+aggregate statistics for the team.  The position number can
+be used to determine what kind of player a specific object 
+is, and then getters can be invoked to obtain that player's 
+stats.  Do not use instanceof() There are a number of articles on
+the subject.  It leads to harder to maintain code. And it really
+isn't object-oriented.
+
+I added a special calcStats method to Team that I called from the
+contructor to get these values. I added a statsPlayers map to Team.  
+Player numbers 1 and 2 were the pitching (#1) and hitting (#2) 
+aggregate dummy players.  I used the "position" for the counts.
+This made life easy because the Players know how to calculate their 
+stats and how to print themselves so all I had to do was sum the 
+normal inputs.
+
+You will need to define methods to support the lookup of an
+individual player's statistics, and the aggregate statistics for
+both pitching and hitting.  The first needs to locate, if it exists,
+the single player on the team with the input number, to call it's
+toString method.  If it does not exist, it is easy to construct the
+appropriate string to return.
+
+You should use String.format to round the quotient values to the correct
+number of decimal places.
+
+Depending on what data members you have for the team, the two
+aggregates can be either directly determined from the precalculated
+counts and sums, or the counts and sums must be first determined by
+iterating over the roster.  In any event, once the count of players
+of the right kind and sums of their counter data members are obtained,
+a string with the appropriate values can be defined. 
+
+If you iterate over the roster to gather the counts, remember that
+in general, it is wise to minimize the number of times you need
+to iterate over a Collection.  
+
+Even more efficient is to define data members in the Team object that
+hold the sums, and load these as you read in the team's players.
+Then you won't need to iterate over them again.
+Note their values are determinable from the roster, so their 
+presence introduces a class invariant property.
+
+Again, it is wise to define a main method that creates a few simple
+Team object instances and tries calling the methods on each of them.
+For example, a team with no players, a team with one pitcher and no
+hitters, a team with one hitter and no pitchers, a team with one of
+each, and a team with several of each, but not so many you cannot
+easily calculate the correct aggregate results, is probably a good
+plan.  My Unit Tests are not totally complete.  Every method in 
+every class should be tested.
+
+Once the Team class has been satisfactorily implemented, then the
+League class is straightforward.  The most complicated part will be
+defining the constructor to correctly iterate over the input file,
+create each new team instance, and install it in the Map object.  The
+other methods essentially check that the team is present, and if it
+is, hand off the operation to the Team object.  If it is not present,
+a simple string indicating as much can be returned.
+
+The constructor should set up a nested loop for iterating over the
+Scanner.  One pass through the outer loop should correspond to
+reading one team's block in the file.  It should first get the
+name for the team, and then enter a loop to get individual player
+data.  The inner loop is a sentinel value controlled loop with
+the sentinel value -1 for the player number.  Roughly it's structure
+is
+Player player;
+while there is data in the file
+  get the team name
+  get next int into playerNum;
+  while (playerNum != -1){
+     get the other common data attributes into variables;
+     if (position is 1){
+        get remaining pitcher values;
+        player = new Pitcher(...);
+     } else{
+        get remaining position player values;
+        player = new PositionPlayer(...);
+     }
+     add player to the growing list of players for the current team
+   }
+   add team to league
+}
+when you drop out, the roster list should have exactly what you need
+create a new team object that can be installed in the League's map
+data member.
+
+Once you have the constructor iteration set up so you think it works,
+you should test it on a number of different files, viz.,
+
+1. an empty file
+2. a file with one team and no members
+3. a file with one team and one member
+4. a file with one team and several members, with both kinds of players
+5. a file with one empty team and one team with several members,
+   both orderings
+6. a file with three teams of several members each, and both kinds of
+   players
+
+If you write a toString method in Team to dump its contents to standard out,
+and write a toString method in League to iterate over the map and call that
+method for each team, you can validate that your constructor is loading
+correctly by comparing what is displayed with what the input file
+contains.
+
+When testing you ALWAYS should start with short, simple examples so you
+can easily and quickly calculate what the correct results should be.
+The kit includes a test file, pdata1.txt, but it's not the best one
+to start with. You can and should create your own test data files.
+

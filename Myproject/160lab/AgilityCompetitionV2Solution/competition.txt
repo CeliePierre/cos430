@@ -1,0 +1,200 @@
+10	9	2014	Border Collie	
+20	Damon	Jemima	0	3	19	11
+5	3	2015	Toy Poodle	
+8	Josephine	Martha	0	1	30	28
+23	9	2009	Spaniel  	
+38	Xander	Sloane	0	0	58	63
+23	10	2011	Spaniel Mix	
+13	Lenore	Francis	0	9	26	57
+25	4	2012	Spaniel Mix	
+28	Inga	Eleanor	0	5	26	4
+16	1	2015	Spaniel	
+45      Chandler	Nayda	0	3	14	42
+9	9	2014	Spaniel Mix	
+29	Fulton	Nigel	0	2	58	2
+3	7	2007	Husky	
+54       Brenna	Indira	0	9	44	13
+29	6	2011	Husky	
+66	Drake	Rhiannon	0	2	27	28
+29	4	2011	Husky	
+69	Shaeleigh	Shay	0	4	53	24
+3	4	2009	Husky	
+44	Ishmael	Rebekah	0	1	14	89
+4	11	2015	Husky	
+47	Camden	Gisela	0	1	55	41
+24	7	2009	Spaniel Mix	
+38	Yvonne	Gareth	0	1	6	94
+9	8	2011	Border Collie	
+36	Jane	Trevor	0	1	31	21
+5	7	2014	Collie	
+46	Leslie	Sasha	0	1	11	78
+21	2	2015	Border Collie	
+15	Madison	Keaton	0	1	35	76
+9	1	2008	Border Collie	
+39	Meghan	Emmanuel	0	1	1	3
+17	2	2007	Border Collie	
+13	Sylvia	Claudia	0	1	17	20
+30	2	2013	Spaniel	
+22	Rinah	Rhonda	0	1	27	36
+13	5	2009	Spaniel	
+26	Thane	Lilah	0	1	32	85
+15	5	2008	Spaniel	
+33	Lynn	Guinevere	0	0	56	77
+19	6	2013	Border Collie	
+24	Regan	Garth	0	1	8	47
+1	11	2007	Spaniel	
+37	Leah	Samson	0	0	53	77
+8	1	2010	Border Collie	
+29	Lydia	Keith	0	1	27	76
+21	5	2010	Irish Setter	
+48	Drew	Fatima	0	0	56	80
+17	8	2009	Mini Poodle	
+19	Raymond	Mason	0	1	10	94
+18	2	2013	Irish Setter	
+43	Kellie	Stacey	0	1	14	59
+25	4	2008	Toy Poodle	
+10	Avram	Colette	0	0	49	2
+24	6	2009	Toy Poodle	
+10	Jared	Sloane	0	0	58	46
+26	8	2015	Border Collie	
+16	Flavia	Britanney	0	1	3	80
+13	4	2011	Toy Poodle	
+9	Sara	Rebekah	0	1	12	52
+24	7	2014	Spaniel	
+34	Xenos	Nadine	0	1	44	70
+12	8	2009	Border Collie	
+12	Leigh	Candice	0	1	41	42
+24	10	2014	Irish Setter	
+49	Azalia	Plato	0	0	46	77
+30	11	2014	Spaniel	
+36	Kathleen	Liberty	0	1	26	52
+14	11	2009	Irish Setter	
+60	Rhona	Fatima	0	0	52	10
+20	8	2012	Toy Poodle	
+12	Dieter	Tarik	0	1	15	33
+26	1	2015	King Charles Spaniel	
+26	Dai	Jonas	0	1	46	10
+4	1	2014	Spaniel	
+38	Heather	Roary	0	1	30	97
+8	6	2013	Irish Setter	
+59	Ashton	Eugenia	0	1	6	43
+11	8	2013	Spaniel	
+43	Galena	Vincent	0	1	40	11
+19	9	2015	Irish Setter	
+65	Vladimir	Callum	0	1	22	13
+31	1	2008	Toy Poodle	
+13	Patrick	Arsenio	0	1	50	96
+12	3	2010	Spaniel	
+35	Dai	Alexander	0	1	21	9
+29	5	2010	Collie	
+63	Mikayla	Lydia	0	1	7	14
+27	11	2008	Irish Setter	
+69	Alan	Selma	0	1	23	45
+29	1	2008	Mini Poodle	
+15	Paula	Tucker	0	1	5	79
+3	10	2008	Mini Poodle	
+16	Kylee	Martena	0	1	13	21
+13	9	2008	Collie	
+52	Libby	Kessie	0	1	11	2
+9	9	2010	Irish Setter	
+59	Noel	Ray	0	1	19	56
+9	11	2010	Toy Poodle	
+7	Malcolm	Jerome	0	1	44	84
+15	4	2014	Mini Poodle	
+15	Kendall	Yael	0	1	7	96
+28	7	2009	King Charles Spaniel	
+36	Clayton	Kato	0	1	15	50
+21	11	2014	Irish Setter	
+67	Zoe	Kirby	0	1	34	36
+22	3	2011	Irish Setter	
+50	Zachary	Vanna	0	1	30	42
+15	2	2015	Collie	
+41	Brett	Lawrence	0	1	6	38
+18	9	2014	Spaniel	
+26	Keaton	Chastity	0	1	5	69
+26	11	2013	Irish Setter	
+53	Isaac	Jessica	0	1	49	60
+6	9	2009	Border Collie	
+20	Quamar	Ray	0	1	24	80
+15	8	2007	Irish Setter	
+54	Colby	Maggie	0	1	7	43
+10	10	2014	Irish Setter	
+54	Autumn	Anne	0	1	2	1
+3	6	2008	King Charles Spaniel	
+31	Ginger	Iris	0	1	17	7
+23	5	2013	Spaniel	
+32	Benjamin	Francesca	0	1	33	6
+29	1	2011	King Charles Spaniel	
+34	David	Jayme	0	1	21	25
+23	6	2009	Irish Setter	
+73	Cyrus	Quemby	0	0	59	29
+26	1	2010	Irish Setter	
+64	Lana	Lydia	0	1	34	62
+19	11	2009	Collie	
+57	Avram	Christine	0	1	29	77
+12	6	2011	Collie	
+45	Vernon	Thane	0	1	42	83
+4	7	2009	Irish Setter	
+64	Karina	Kyle	0	1	13	60
+1	4	2013	Spaniel	
+35	Jorden	Eaton	0	0	50	8
+30	10	2010	Irish Setter	
+66	Joy	Jelani	0	1	18	72
+18	9	2011	Irish Setter	
+53	Aspen	Chaim	0	1	15	54
+21	9	2012	Collie	
+41	Ora	Frances	0	1	4	97
+27	10	2012	Irish Setter	
+60	Peter	Kaitlin	0	1	49	5
+4	2	2010	Irish Setter	
+60	Cleo	Anika	0	1	19	48
+17	2	2011	Spaniel	
+30	Lilah	Kimberly	0	1	36	37
+1	10	2007	Irish Setter	
+50	Jillian	Quinlan	0	1	24	80
+8	5	2009	Irish Setter	
+62	David	Omar	0	0	59	93
+30	11	2008	Irish Setter	
+61	Rajah	Armand	0	0	56	78
+24	6	2010	Border Collie	
+28	Tanisha	Hedwig	0	1	47	51
+14	7	2014	Spaniel	
+38      Alea	Yeo	0	1	34	87
+12	10	2011	Spaniel	
+36	Jonah	Burton	0	1	37	7
+16	8	2008	Border Collie	
+24	Adena	Claudia	0	1	18	43
+23	7	2015	Toy Poodle	
+9	Peter	Tasha	0	1	32	78
+31	2	2009	Border Collie	
+22	Asher	Price	0	1	37	67
+11	5	2008	Toy Poodle	
+8	May	Castor	0	1	52	95
+30	6	2009	Border Collie	
+29	Kirsten	Bernard	0	0	52	36
+12	1	2013	Collie	
+36	Fay	Kelly	0	1	18	60
+4	3	2007	Collie	4
+0	Winter	Grace	0	1	11	63
+4	10	2010	Border Collie	
+28	Pandora	Felix	0	1	24	93
+22	8	2015	Toy Poodle	
+67	Tanisha	Gay	9	1	16	92
+18	10	2012	Collie	
+43	Martha	Francis	0	1	16	65
+11	6	2015	Collie	
+36	Harper	Kermit	0	1	25	41
+7	4	2015	Spaniel Mix	
+30	Yeo	Maryam	0	1	50	93
+27	6	2008	Spaniel	
+50	Burke	Acton	0	1	28	78
+24	7	2012	Toy Poodle	
+7	Gisela	Diana	0	1	34	71
+6	11	2009	Border Collie	
+25	Bryar	Colt	0	1	15	30
+5	9	2007	King Charles Spaniel	
+29	Judith	Helen	0	1	44	12
+25	5	2010	Toy Poodle	
+9	Mira	Delilah	0	1	41	28
+2	6	2015	King Charles Spaniel	
+26	Evelyn	Dante	0	1	38	91

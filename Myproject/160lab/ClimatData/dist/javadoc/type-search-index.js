@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"climatdata","l":"ClimatData"},{"p":"climatdata","l":"DailyReading"},{"p":"climatdata","l":"Date"}];updateSearchResults();
